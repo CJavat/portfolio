@@ -1,0 +1,24 @@
+:root {
+    --black: #0A171A;
+    --greyishBlue: #3D5C64;
+    --lightGrayishBlue: #6B8B93;
+    --lightGrayishCyan:#A0BBBF;
+    --paleGreen: #DAE2DF;
+}
+
+* {
+    background-color: var(--lightGrayishBlue);
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.navegacion img{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
