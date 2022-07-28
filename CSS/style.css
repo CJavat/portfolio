@@ -5,18 +5,17 @@
     --manatee: #888a9c;
     --matterhorn: #43333b;
     --oriental-pink: #c89191;
+    --primaryWhite: #fff;
     --regent-gray: #8c949e;
     --storm-gray: #6e6f7c;
     --trout: #515c62;
     --trout-primary: #4a4959;
-
 }
 
 * {
     box-sizing: border-box;
     color: var(--paleGreen);
     font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -24,32 +23,33 @@
 }
 
 body {
-    background-color: var(--greyishBlue2);
+    background-color: var(--ebony-clay);
     box-sizing: border-box;
     width: 100%;
 }
 
 .cabecera {
-    background-image: url();
+    background-image: url("/IMG/fondoHeader.jpg");
     background-repeat: no-repeat;
 }
 
 .navegacion {
     align-items: center;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
+    background-color: black;
     display: flex;
     flex-flow: row nowrap;
-    height: 3rem;
+    height: 5.5rem;
     justify-content: space-between;
     line-height: 0.8;
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
+    padding: 0.5rem;
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1000;
 }
 
-.navegacion img{
+.logo{
     border: 2px solid var(--primaryWhite);
     border-radius: 50%;
     height: 2.5rem;
@@ -58,44 +58,51 @@ body {
     width: 2.5rem;
 }
 
-.listaNavegacion {
-    display: flex;
-    flex-flow: row wrap;
-    margin-right: 5px;
-}
-
-.elementolista a {
-    font-size: 0.5em;
-    transition: color 1s;
-    margin-left: 10px;
-}
-.elementolista a:hover {
-    color: red;
-}
-
-.quienSoy, .experiencia, .aptitudesLI {
-    padding-right: 15px;
-    border-right: 2px solid var(--paleGreen);
-}
-
-.contenedorPrincipal {
-    padding: 4rem 1rem 0.5rem 1rem;
-}
-
-.presentacion {
-    display: flex;
-    flex-flow: column nowrap;
-    margin-bottom: 1rem;
-    background-color: #000;
-}
-
-.saludo {
+.menuMobile {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: transparent;
+    box-sizing: border-box;
     text-align: center;
+    border: none;
+    outline: none;
+}
+
+.bar {
+    display: block;
+    margin: 5px 0;
+    width: 28px;
+    height: 2px;
     background-color: red;
 }
 
-.descripcion {
-    background-color: green;
+.bar:first-child {
+    width: 14px;
+    margin-left: 14px;
+}
+
+.bar:nth-child(2) {
+    margin: 6px 0;
+}
+
+.bar:last-child {
+    width: 14px;
+    margin-right: 14px;
+}
+
+.Container__listaNavegacionMobile {
+    z-index: 999;
+    display: none;
+}
+
+.Container__listaNavegacionDesktop {
+    display: none;
+}
+
+.listaNavegacionMobile {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: 5px;
 }
 
 .fotoDePerfil {
@@ -105,9 +112,16 @@ body {
     height: 100%;
 }
 
-.contenedorDeBotones {
-    background-color: white;
-}
+
+
+
+
+
+
+
+
+
+
 
 
 
