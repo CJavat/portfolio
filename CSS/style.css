@@ -1,15 +1,15 @@
 :root {
-    --ebony-clay: #1e212e;
+    --ebony-clay: #1e212e;       /*PRIMER COLOR PRINCIPAL*/
+    --limed-spruce: #32444b;    /*SEGUNDO COLOR PRINCIPAL*/
+    --manatee: #888a9c;        /*USAR CUANDO EL DE FONDO ES LIMED*/
+    --trout-primary: #4a4959; /*USAR CUANDO EL DE FONDO ES EBONY*/
+    --oriental-pink: #c89191;/*ELEMENTOS*/
     --ferra: #6c4b4e;
-    --limed-spruce: #32444b;
-    --manatee: #888a9c;
     --matterhorn: #43333b;
-    --oriental-pink: #c89191;
     --primaryWhite: #fff;
     --regent-gray: #8c949e;
     --storm-gray: #6e6f7c;
     --trout: #515c62;
-    --trout-primary: #4a4959;
 }
 
 * {
@@ -23,7 +23,7 @@
 }
 
 body {
-    background-color: var(--ebony-clay);
+    /* background-color: var(--ebony-clay); */
     box-sizing: border-box;
     width: 100%;
 }
@@ -85,7 +85,6 @@ body {
     width: 14px;
 }
 
-/* ACTIVAR CUANDO TERMINE DE EDITAR EL MENU. */
 .Container__listaNavegacionMobile {
     align-items: flex-start;
     background-color: var(--ebony-clay);
@@ -184,7 +183,7 @@ body {
     text-align: center;
     font-size: 0.9rem;
     font-weight: 900;
-    background-color: var(--limed-spruce);
+    background-color: var(--trout-primary);
     border-radius: 8px;
     width: 10rem;
     height: 3rem;
@@ -192,16 +191,16 @@ body {
     border: none;
 }
 
-.contenedorPrincipal {
-    padding: 1rem;
-}
-
+/*********CONTENEDOR #1**********************/
 .saludo {
-    margin: 1.5rem 0;
+    background-color: var(--limed-spruce);
+    margin: 1.5rem 0 0 0;
+    padding: 1rem;
+    width: 100vw;
 }
 
 .saludo__fotoDePerfil {
-    border: 6px solid var(--ebony-clay);
+    border: 6px solid var(--limed-spruce);
     border-radius: 5px;
     box-shadow: 2px 2px 10px #000, -2px -2px 10px #000;
     height: 100%;
@@ -217,7 +216,7 @@ body {
 }
 
 .saludo__titulo::after {
-    background-color: var(--ferra);
+    background-color: var(--manatee);
     bottom: 0;
     color: #000;
     content: '';
@@ -228,7 +227,7 @@ body {
 }
 
 .saludo__descubre {
-    color: var(--ferra);
+    color: var(--manatee);;
     display: block;
     font-size: 1.5rem;
 }
@@ -239,13 +238,22 @@ body {
 }
 
 .saludo__informacionPersonal {
-    border: 1px solid var(--ferra);
+    box-sizing: border-box;
+    border: 1px solid var(--manatee);
     border-radius: 5px;
     display: grid;
     gap: 10px;
     grid-auto-rows: 2.5rem;
-    grid-template-columns: repeat(2, minmax(1rem, 1fr));
+    grid-template-columns: repeat(3, minmax(1rem, 1fr));
     padding: 1rem;
+}
+
+.saludo__informacionPersonal p:nth-child(odd) {
+    grid-column: 1 / 2;
+}
+
+.saludo__informacionPersonal p:nth-child(even) {
+    grid-column: 2 / span 2;
 }
 
 .saludo__descargarCV {
@@ -254,12 +262,40 @@ body {
     text-align: center;
     font-size: 0.9rem;
     font-weight: 900;
-    background-color: var(--limed-spruce);
+    background-color: var(--trout-primary);
     border-radius: 8px;
     width: 10rem;
     height: 3rem;
     outline: none;
     border: none;
+}
+
+/*********CONTENEDOR #2**********************/
+.experiencia {
+    background-color: var(--ebony-clay);
+    padding: 1rem;
+    border: 2px solid red;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.experiencia__h2 {
+    color: var(--oriental-pink);
+    font-size: 1.3rem;
+}
+
+.experiencia__h3 {
+    font-size: 2.3rem;
+
+}
+
+.experiencia__h2::after {
+    
+}
+
+.experiencia__contenedor {
+    border: 1px solid var(--trout-primary);
+    margin: 3.5rem 0;
 }
 
 
@@ -272,8 +308,38 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********CONTENEDOR #3**********************/
+.aptitudes {
+    background-color: var(--limed-spruce);
+}
+/*********CONTENEDOR #4**********************/
+.skills {
+    background-color: var(--ebony-clay);
+}
+
+
+
+
+/***********ESTILOS A LOS SKILLS********************************/
 .skills__grupoSkills {
-    background-color: gray;
+    background-color: var(--trout-primary);
     display: inline-flex;
 }
 
@@ -286,7 +352,7 @@ body {
 }
 
 .skill-media {
-    background: linear-gradient(to right, black 0%, black 50%, transparent 50%, transparent 100% );
+    background: linear-gradient(to right, var(--ebony-clay) 0%, var(--ebony-clay) 50%, transparent 50%, transparent 100% );
     border: 2px solid black;
     border-radius: 15px;
     height: 15px;
@@ -294,7 +360,7 @@ body {
 }
 
 .skill-llena {
-    background-color: var(--primaryBlack);
+    background-color: var(--ebony-clay);
     border: 2px solid black;
     border-radius: 15px;
     height: 15px;
