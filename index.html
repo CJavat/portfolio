@@ -7,312 +7,306 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/2ea7eef268.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="CSS/style.css">
         <link rel="shortcut icon" href="IMG/CP-Logo.png" type="image/x-icon">
         <title>Carlos Plascencia</title>
     </head>
     <body>
-        <header class="cabecera" id="cabecera">
-            <nav class="navegacion">
-                <img src="IMG/CP-Logo.png" alt="CP-Logo" class="logo" id="logo">
-                <button class="menuMobile">
-					<span class="bar"></span>
-					<span class="bar"></span>
-					<span class="bar"></span>
-				</button>
-                <div class="Container__listaNavegacionMobile">
-                    <ul class="listaNavegacionMobile">
-                        <li class="elementolistaMobile" id="elementolistaMobile"><a href="#" class="quienSoyMobile" id="quienSoyMobile">Quien Soy</a></li>
-                        <li class="elementolistaMobile" id="elementolistaMobile"><a href="#" class="experienciaMobile" id="experienciaMobile">Experiencia</a></li>
-                        <li class="elementolistaMobile" id="elementolistaMobile"><a href="#" class="aptitudesLIMobile" id="aptitudesLIMobile">Aptitudes</a></li>
-                        <li class="elementolistaMobile" id="elementolistaMobile"><a href="#" class="skillsLIMobile" id="skillsLIMobile">Skills</a></li>
-                    </ul>
-                    <button type="submit" class="contactameMobile" id="contactameMobile">Contáctame</button>
+        <div class="contenedor-web"> /*AGREGAR CONTAINER DESPUÉS PARA EL ZOOM OUT*/
+            <header class="cabecera" id="cabecera">
+                <nav class="navegacion">
+                    <img src="IMG/CP-Logo.png" alt="CP-Logo" class="logo" id="logo">
+                    <button class="menuMobile">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                    <div class="Container__listaNavegacionMobile">
+                        <ul class="listaNavegacionMobile">
+                            <li class="elementolistaMobile" id="elementolistaMobile"><a href="#" class="quienSoyMobile" id="quienSoyMobile">Quien Soy</a></li>
+                            <li class="elementolistaMobile" id="elementolistaMobile"><a href="#" class="experienciaMobile" id="experienciaMobile">Experiencia</a></li>
+                            <li class="elementolistaMobile" id="elementolistaMobile"><a href="#" class="aptitudesLIMobile" id="aptitudesLIMobile">Aptitudes</a></li>
+                            <li class="elementolistaMobile" id="elementolistaMobile"><a href="#" class="skillsLIMobile" id="skillsLIMobile">Skills</a></li>
+                        </ul>
+                        <button type="submit" class="contactameMobile" id="contactameMobile">Contáctame</button>
+                    </div>
+                    <div class="Container__listaNavegacionDesktop" id="Container__listaNavegacionDesktop">
+                        <ul class="listaNavegacionDesktop">
+                            <li class="elementolistaDesktop" id="elementolistaDesktop"><a href="#" class="quienSoyDesktop" id="quienSoyDesktop">Quien Soy</a></li>
+                            <li class="elementolistaDesktop" id="elementolistaDesktop"><a href="#" class="experienciaDesktop" id="experienciaDesktop">Experiencia</a></li>
+                            <li class="elementolistaDesktop" id="elementolistaDesktop"><a href="#" class="aptitudesLIDesktop" id="aptitudesLIDesktop">Aptitudes</a></li>
+                            <li class="elementolistaDesktop" id="elementolistaDesktop"><a href="#" class="skillsLIDesktop" id="skillsLIDesktop">Skills</a></li>
+                        </ul>
+                        <button type="submit" class="contactameDesktop" id="contactameDesktop">Contáctame</button>
+                    </div>
+                </nav>
+                <div class="presentacion" id="presentacion">
+                    <img src="IMG/Spider-Man Face (SinFondo).png" alt="Carlos-Plascencia" class="presentacion__imagen">
+                    <h1 class="presentacion__titulo">¡Hola Mundo! Soy</h1>
+                    <h2 class="presentacion__subtitulo">CARLOS PLASCENCIA</h2>
+                    <p class="presentacion__descripcion">Programador con metas en ser un FullStack</p>
+                    <button class="presentacion__boton">CONTRATAME</button>
                 </div>
-                <div class="Container__listaNavegacionDesktop" id="Container__listaNavegacionDesktop">
-                    <ul class="listaNavegacionDesktop">
-                        <li class="elementolistaDesktop" id="elementolistaDesktop"><a href="#" class="quienSoyDesktop" id="quienSoyDesktop">Quien Soy</a></li>
-                        <li class="elementolistaDesktop" id="elementolistaDesktop"><a href="#" class="experienciaDesktop" id="experienciaDesktop">Experiencia</a></li>
-                        <li class="elementolistaDesktop" id="elementolistaDesktop"><a href="#" class="aptitudesLIDesktop" id="aptitudesLIDesktop">Aptitudes</a></li>
-                        <li class="elementolistaDesktop" id="elementolistaDesktop"><a href="#" class="skillsLIDesktop" id="skillsLIDesktop">Skills</a></li>
-                    </ul>
-                    <button type="submit" class="contactameDesktop" id="contactameDesktop">Contáctame</button>
-                </div>
-            </nav>
-            <div class="presentacion" id="presentacion">
-                <img src="IMG/Spider-Man Face (SinFondo).png" alt="Carlos-Plascencia" class="presentacion__imagen">
-                <h1 class="presentacion__titulo">¡Hola Mundo! Soy</h1>
-                <h2 class="presentacion__subtitulo">CARLOS PLASCENCIA</h2>
-                <p class="presentacion__descripcion">Programador con metas en ser un FullStack</p>
-                <button class="presentacion__boton">CONTRATAME</button>
-            </div>
-        </header>
-        <main class="contenedorPrincipal" id="contenedorPrincipal">
-            <div class="saludo" id="saludo">
-                <img src="IMG/FotoPerfil.jpg" alt="Foto de Perfil" class="saludo__fotoDePerfil" id="saludo__fotoDePerfil">
-                <h2 class="saludo__titulo" id="saludo__titulo">
-                    <span class="saludo__descubre">Descubre</span> Acerca De Mi
-                </h2>
-                <p class="saludo__descripcion" id="saludo__descripcion">
-                    Mi nombre es Carlos Plascencia, Soy Programador JR, recién 
-                    egresado de la carrera de Ingeniería en Computación en 
-                    Guadalajara, Jalisco. Me apasiona ésta profesión, todo lo que 
-                    se puede hacer solo con tus dedos y mente, Esa debe ser una de 
-                    las razones por las cuales decidí entrar a la programación.<br> 
-                    Una de mis metas a mediano o largo plazo es poder lograr ser un 
-                    FullStack. A diario intento estudiar y programar aunque sea 30 min. 
-                    para poder lograrlo lo más rápido posible. 
-                </p>
-                <div class="saludo__informacionPersonal">
-                    <p>Nombre:</p>
-                    <p>Carlos Plascencia.</p>
-                    <p>Fecha de Nacimiento:</p>
-                    <p>23/MAYO/1998.</p>
-                    <p>Edad:</p>
-                    <p>24 Años.</p>
-                    <p>Celular:</p>
-                    <p>+52 3312135312.</p>
-                    <p>Direcctión:</p>
-                    <p>Zapopan, Jalisco.</p>
-                    <p>Experiencia:</p>
-                    <p>Prácticas Escolares y 1 año profesional.</p>
-                    <p>Freelancer:</p>
-                    <p>Disponible.</p>
-                    <p>E-Mail:</p>
-                    <p>cdpm98@hotmail.com</p>
-                </div>
-                <button type="submit" class="saludo__descargarCV" id="saludo__descargarCV">Descargar CV</button>
-            </div>
-            <div class="experiencia" id="experiencia">
-                <h2 class="experiencia__h2">Experiencia & Educación</h2>
-                <h3 class="experiencia__h3">Mi Resumen</h3>
-                <div class="experiencia__contenedor hortomallas">
-                    <h2 class="experiencia__fecha">2021 - ACTUAL</h2>
-                    <h3 class="experiencia__titulo">Programador JR</h3>
-                    <p class="experiencia__descripcion">
-                        Le doy soporte a la página de la empresa. Hago también algunos programas 
-                        que me piden. En éste perido en el que he estado, programé en C# 4 minijuegos 
-                        los cuales fueron: Rompecabezas, Rompecabezas DragDrop, PingPong y Memorama. 
-                        También realicé un programa en PHP para cambiar extensiones y nombres de los archivos 
-                        para agilizar algunas actividades. También he editado imágenes para la página y etiquetas. 
+            </header>
+            <main class="contenedorPrincipal" id="contenedorPrincipal">
+                <div class="saludo" id="saludo">
+                    <img src="IMG/FotoPerfil.jpg" alt="Foto de Perfil" class="saludo__fotoDePerfil" id="saludo__fotoDePerfil">
+                    <h2 class="saludo__titulo" id="saludo__titulo">
+                        <span class="saludo__descubre">Descubre</span> Acerca De Mi
+                    </h2>
+                    <p class="saludo__descripcion" id="saludo__descripcion">
+                        Mi nombre es Carlos Plascencia, Soy Programador JR, recién 
+                        egresado de la carrera de Ingeniería en Computación en 
+                        Guadalajara, Jalisco. Me apasiona ésta profesión, todo lo que 
+                        se puede hacer solo con tus dedos y mente, Esa debe ser una de 
+                        las razones por las cuales decidí entrar a la programación.<br> 
+                        Una de mis metas a mediano o largo plazo es poder lograr ser un 
+                        FullStack. A diario intento estudiar y programar aunque sea 30 min. 
+                        para poder lograrlo lo más rápido posible. 
                     </p>
-                    <img src="IMG/Hortomallas_Logo.png" alt="HORTOMALLAS" class="experiencia__hortomallas" id="experiencia__hortomallas">
+                    <div class="saludo__informacionPersonal">
+                        <p>Nombre:</p>
+                        <p>Carlos Plascencia.</p>
+                        <p>Fecha de Nacimiento:</p>
+                        <p>23/MAYO/1998.</p>
+                        <p>Edad:</p>
+                        <p>24 Años.</p>
+                        <p>Celular:</p>
+                        <p>+52 3312135312.</p>
+                        <p>Direcctión:</p>
+                        <p>Zapopan, Jalisco.</p>
+                        <p>Experiencia:</p>
+                        <p>Prácticas Escolares y 1 año profesional.</p>
+                        <p>Freelancer:</p>
+                        <p>Disponible.</p>
+                        <p>E-Mail:</p>
+                        <p>cdpm98@hotmail.com</p>
+                    </div>
+                    <button type="submit" class="saludo__descargarCV" id="saludo__descargarCV">Descargar CV</button>
                 </div>
-                <div class="experiencia__contenedor gdlCircuits">
-                    <h2 class="experiencia__fecha">2020 - 2021</h2>
-                    <h3 class="experiencia__titulo">Operador Técnico</h3>
-                    <p class="experiencia__descripcion">
-                        Armar, cortar, probar y empaquetar sensores para carro. Estuvé a cargo de 
-                        una mágina que empaquetaba y cortaba sensores chiquitos de carro. Cuando que fallaba 
-                        o se paraba la máquina es cuando tenía que hayar la falla y solucionarla.
-                    </p>
-                    <img src="IMG/GDLCIRCUITS_Logo.png" alt="GDL CIRCUITS" class="experiencia__gdlcircuits" id="experiencia__gdlcircuits">
+                <div class="experiencia" id="experiencia">
+                    <h2 class="experiencia__h2">Experiencia & Educación</h2>
+                    <h3 class="experiencia__h3">Mi Resumen</h3>
+                    <div class="experiencia__contenedor">
+                        <h2 class="experiencia__fecha">2021 - ACTUAL</h2>
+                        <h3 class="experiencia__titulo">Programador JR</h3>
+                        <p class="experiencia__descripcion">
+                            Le doy soporte a la página de la empresa. Hago también algunos programas 
+                            que me piden. En éste perido en el que he estado, programé en C# 4 minijuegos 
+                            los cuales fueron: Rompecabezas, Rompecabezas DragDrop, PingPong y Memorama. 
+                            También realicé un programa en PHP para cambiar extensiones y nombres de los archivos 
+                            para agilizar algunas actividades. También he editado imágenes para la página y etiquetas. 
+                        </p>
+                        <img src="IMG/Hortomallas_Logo.png" alt="HORTOMALLAS" class="experiencia__hortomallas">
+                    </div>
+                    <div class="experiencia__contenedor">
+                        <h2 class="experiencia__fecha">2020 - 2021</h2>
+                        <h3 class="experiencia__titulo">Operador Técnico</h3>
+                        <p class="experiencia__descripcion">
+                            Armar, cortar, probar y empaquetar sensores para carro. Estuvé a cargo de 
+                            una mágina que empaquetaba y cortaba sensores chiquitos de carro. Cuando que fallaba 
+                            o se paraba la máquina es cuando tenía que hayar la falla y solucionarla.
+                        </p>
+                        <img src="IMG/GDLCIRCUITS_Logo.png" alt="GDL CIRCUITS" class="experiencia__gdlcircuits">
+                    </div>
+                    <div class="experiencia__contenedor uteg">
+                        <h2 class="experiencia__fecha">2016 - 2020</h2>
+                        <h3 class="experiencia__titulo">Ingeniería en Computación</h3>
+                        <p class="experiencia__descripcion">
+                            En ésta institución estudié la ingeniería, duré 4 años haciendo proyectos escolares, 
+                            muchos trabajos de practica y ví casi todas las ramas de la computación. Por ejemplo, 
+                            tuve materias de Redes, Sistemas Embebidos (ARDUINO), Programación, Base de Datos.
+                        </p>
+                        <img src="IMG/UTEG_Logo.png" alt="UTEG" class="experiencia__uteg" id="experiencia__uteg">
+                    </div>
+                    <div class="experiencia__contenedor cetis">
+                        <h2 class="experiencia__fecha">2013 - 2016</h2>
+                        <h3 class="experiencia__titulo">Técnico en Programación</h3>
+                        <p class="experiencia__descripcion">
+                            Es una institución de bachillerato con carrera técnica, en la cual estudié Programación, y ahí 
+                            fué donde comenzó todo, vi lenguajes de programación como: HTML, CSS, ANDROID, JAVA, C++, SQL, 
+                            también algo de E-Commerce.
+                        </p>
+                        <img src="IMG/Cetis14_Logo.png" alt="CETIS No. 14" class="experiencia__cetis" id="experiencia__cetis">
+                    </div>
                 </div>
-                <div class="experiencia__contenedor uteg">
-                    <h2 class="experiencia__fecha">2016 - 2020</h2>
-                    <h3 class="experiencia__titulo">Ingeniería en Computación</h3>
-                    <img src="IMG/UTEG_Logo.png" alt="UTEG" class="experiencia__uteg" id="experiencia__uteg">
+                <div class="aptitudes" id="aptitudes">
+                    <div class="aptitudes__bordes">
+                        <h3 class="aptitudes__titulo" id="aptitudes__titulo">APTITUDES</h3>
+                        <ul class="aptitudes__lista" id="aptitudes__lista">
+                            <li class="aptitudes__elementos" id="aptitudes__elementos">
+                                <p><span class="aptitudes__cruz">+</span> Compromiso</p>
+                            </li>
+                            <li class="aptitudes__elementos" id="aptitudes__elementos">
+                                <p><span class="aptitudes__cruz">+</span> Empatía</p>
+                            </li>
+                            <li class="aptitudes__elementos" id="aptitudes__elementos">
+                                <p><span class="aptitudes__cruz">+</span> Organización en el trabajo</p>
+                            </li>
+                            <li class="aptitudes__elementos" id="aptitudes__elementos">
+                                <p><span class="aptitudes__cruz">+</span> Mentalidad de crecer</p>
+                            </li>
+                            <li class="aptitudes__elementos" id="aptitudes__elementos">
+                                <p><span class="aptitudes__cruz">+</span> Capacidad de adaptación al cambio</p>
+                            </li>
+                            <li class="aptitudes__elementos" id="aptitudes__elementos">
+                                <p><span class="aptitudes__cruz">+</span> Creatividad e Iniciativa</p>
+                            </li>
+                            <li class="aptitudes__elementos" id="aptitudes__elementos">
+                                <p><span class="aptitudes__cruz">+</span> Manejo de herramientas informaticas</p>
+                            </li>
+                            <li class="aptitudes__elementos" id="aptitudes__elementos">
+                                <p><span class="aptitudes__cruz">+</span> Capacidad de trabajar en equipo</p>
+                            </li>
+                            <li class="aptitudes__elementos" id="aptitudes__elementos">
+                                <p><span class="aptitudes__cruz">+</span> Persona responsable</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="experiencia__contenedor cetis">
-                    <h2 class="experiencia__fecha">2013 - 2016</h2>
-                    <h3 class="experiencia__titulo">Técnico en Programación</h3>
-                    <img src="IMG/Cetis14_Logo.png" alt="CETIS No. 14" class="experiencia__cetis" id="experiencia__cetis">
+                <div class="skills" id="skills">
+                    <div class="skills__bordes">
+                        <h3 class="skills__titulo" id="skills__titulo">MIS SKILLS</h3>
+                        <ul><!-- <i class="skill-llena"><i class="skill-vacia"> -->
+                            <li class="skills__elementos" id="skills__elementos">
+                                <p>HTML</p>
+                                <div class="skills__grupoSkills skills__HTML" id="skills__grupoSkills">
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-vacia"></i>
+                                </div>
+                            </li>
+                            <li class="skills__elementos" id="skills__elementos">
+                                <p>CSS</p>
+                                <div class="skills__grupoSkills skills__CSS" id="skills__grupoSkills">
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-media"></i>
+                                    <i class="skill-vacia"></i>
+                                    <i class="skill-vacia"></i>
+                                </div>
+                            </li>
+                            <li class="skills__elementos" id="skills__elementos">
+                                <p>JAVASCRIPT</p>
+                                <div class="skills__grupoSkills skills__JAVASCRIPT" id="skills__grupoSkills">
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-media"></i>
+                                    <i class="skill-vacia"></i>
+                                    <i class="skill-vacia"></i>
+                                </div>
+                            </li>
+                            <li class="skills__elementos" id="skills__elementos">
+                                <p>C#</p>
+                                <div class="skills__grupoSkills skills__C-Sharp" id="skills__grupoSkills">
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-media"></i>
+                                    <i class="skill-vacia"></i>
+                                    <i class="skill-vacia"></i>
+                                    <i class="skill-vacia"></i>
+                                </div>
+                            </li>
+                            <li class="skills__elementos" id="skills__elementos">
+                                <p>JAVA</p>
+                                <div class="skills__grupoSkills skills__JAVA" id="skills__grupoSkills">
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-media"></i>
+                                    <i class="skill-vacia"></i>
+                                    <i class="skill-vacia"></i>
+                                </div>
+                            </li>
+                            <li class="skills__elementos" id="skills__elementos">
+                                <p>C++</p>
+                                <div class="skills__grupoSkills skills__C-PLUSPLUS" id="skills__grupoSkills">
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-media"></i>
+                                    <i class="skill-vacia"></i>
+                                    <i class="skill-vacia"></i>
+                                </div>
+                            </li>
+                            <li class="skills__elementos" id="skills__elementos">
+                                <p>PYTHON</p>
+                                <div class="skills__grupoSkills skills__PYTHON" id="skills__grupoSkills">
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-media"></i>
+                                    <i class="skill-vacia"></i>
+                                    <i class="skill-vacia"></i>
+                                    <i class="skill-vacia"></i>
+                                </div>
+                            </li>
+                            <li class="skills__elementos" id="skills__elementos">
+                                <p>PHP</p>
+                                <div class="skills__grupoSkills skills__PHP" id="skills__grupoSkills">
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-media"></i>
+                                    <i class="skill-vacia"></i>
+                                    <i class="skill-vacia"></i>
+                                    <i class="skill-vacia"></i>
+                                </div>
+                            </li>
+                            <li class="skills__elementos" id="skills__elementos">
+                                <p>ADROID/KOTLIN</p>
+                                <div class="skills__grupoSkills skills__Android" id="skills__grupoSkills">
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-media"></i>
+                                    <i class="skill-vacia"></i>
+                                    <i class="skill-vacia"></i>
+                                    <i class="skill-vacia"></i>
+                                </div>
+                            </li>
+                            <li class="skills__elementos" id="skills__elementos">
+                                <p>SQL</p>
+                                <div class="skills__grupoSkills skills__SQL" id="skills__grupoSkills">
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-media"></i>
+                                    <i class="skill-vacia"></i>
+                                </div>
+                            </li>
+                            <li class="skills__elementos" id="skills__elementos">
+                                <p>POSTGRESQL</p>
+                                <div class="skills__grupoSkills skills__POSTGRESQL" id="skills__grupoSkills">
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-media"></i>
+                                    <i class="skill-vacia"></i>
+                                    <i class="skill-vacia"></i>
+                                </div>
+                            </li>
+                            <li class="skills__elementos" id="skills__elementos">
+                                <p>GITHUB</p>
+                                <div class="skills__grupoSkills skills__GITHUB" id="skills__grupoSkills">
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-llena"></i>
+                                    <i class="skill-media"></i>
+                                    <i class="skill-vacia"></i>
+                                    <i class="skill-vacia"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="aptitudes" id="aptitudes">
-                <h3 class="aptitudes__titulo" id="aptitudes__titulo">APTITUDES</h3>
-                <ul class="aptitudes__lista" id="aptitudes__lista">
-                    <li class="aptitudes__elementos" id="aptitudes__elementos">
-                        <p>+ Compromiso</p>
-                    </li>
-                    <li class="aptitudes__elementos" id="aptitudes__elementos">
-                        <p>+ Empatía</p>
-                    </li>
-                    <li class="aptitudes__elementos" id="aptitudes__elementos">
-                        <p>+ Organización en el trabajo</p>
-                    </li>
-                    <li class="aptitudes__elementos" id="aptitudes__elementos">
-                        <p>+ Mentalidad de crecer</p>
-                    </li>
-                    <li class="aptitudes__elementos" id="aptitudes__elementos">
-                        <p>+ Capacidad de adaptación al cambio</p>
-                    </li>
-                    <li class="aptitudes__elementos" id="aptitudes__elementos">
-                        <p>+ Creatividad e Iniciativa</p>
-                    </li>
-                    <li class="aptitudes__elementos" id="aptitudes__elementos">
-                        <p>+ Manejo de herramientas informaticas</p>
-                    </li>
-                    <li class="aptitudes__elementos" id="aptitudes__elementos">
-                        <p>+ Capacidad de trabajar en equipo</p>
-                    </li>
-                    <li class="aptitudes__elementos" id="aptitudes__elementos">
-                        <p>+ Persona responsable</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="skills" id="skills">
-                <h3 class="skills__titulo" id="skills__titulo">MIS SKILLS</h3>
-                <ul><!-- <i class="skill-llena"><i class="skill-vacia"> -->
-                    <li class="skills__elementos" id="skills__elementos">
-                        <span class="skills__HTML" id="skills__HTML">
-                            HTML
-                            <div class="skills__grupoSkills" id="skills__grupoSkills">
-                                <i class="skill-llena"></i>
-                                <i class="skill-llena"></i>
-                                <i class="skill-llena"></i>
-                                <i class="skill-llena"></i>
-                                <i class="skill-vacia"></i>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="skills__elementos" id="skills__elementos">
-                        <span class="skills__CSS" id="skills__CSS">
-                            CSS
-                            <div class="skills__grupoSkills" id="skills__grupoSkills">
-                                <i class="skill-llena"></i>
-                                <i class="skill-llena"></i>
-                                <i class="skill-media"></i>
-                                <i class="skill-vacia"></i>
-                                <i class="skill-vacia"></i>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="skills__elementos" id="skills__elementos">
-                        <span class="skills__JAVASCRIPT" id="skills__JAVASCRIPT">
-                            JAVASCRIPT
-                            <div class="skills__grupoSkills" id="skills__grupoSkills">
-                                <i class="skill-llena"></i>
-                                <i class="skill-llena"></i>
-                                <i class="skill-media"></i>
-                                <i class="skill-vacia"></i>
-                                <i class="skill-vacia"></i>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="skills__elementos" id="skills__elementos">
-                        <span class="skills__C-Sharp" id="skills__C-Sharp">
-                            C#
-                            <div class="skills__grupoSkills" id="skills__grupoSkills">
-                                <i class="skill-llena"></i>
-                                <i class="skill-media"></i>
-                                <i class="skill-vacia"></i>
-                                <i class="skill-vacia"></i>
-                                <i class="skill-vacia"></i>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="elementosSkills" id="skills__elementos">
-                        <span class="skills__JAVA" id="skills__JAVA">
-                            JAVA
-                            <div class="skills__grupoSkills" id="skills__grupoSkills">
-                                <i class="skill-llena"></i>
-                                <i class="skill-llena"></i>
-                                <i class="skill-media"></i>
-                                <i class="skill-vacia"></i>
-                                <i class="skill-vacia"></i>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="skills__elementos" id="skills__elementos">
-                        <span class="skills__C-PLUSPLUS" id="skills__C-PLUSPLUS">
-                            C++
-                            <div class="skills__grupoSkills" id="skills__grupoSkills">
-                                <i class="skill-llena"></i>
-                                <i class="skill-llena"></i>
-                                <i class="skill-media"></i>
-                                <i class="skill-vacia"></i>
-                                <i class="skill-vacia"></i>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="skills__elementos" id="skills__elementos">
-                        <span class="skills__PYTHON" id="skills__PYTHON">
-                            PYTHON
-                            <div class="skills__grupoSkills" id="skills__grupoSkills">
-                                <i class="skill-llena"></i>
-                                <i class="skill-media"></i>
-                                <i class="skill-vacia"></i>
-                                <i class="skill-vacia"></i>
-                                <i class="skill-vacia"></i>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="skills__elementos" id="skills__elementos">
-                        <span class="skills__PHP" id="skills__PHP">
-                            PHP
-                            <div class="skills__grupoSkills" id="skills__grupoSkills">
-                                <i class="skill-llena"></i>
-                                <i class="skill-media"></i>
-                                <i class="skill-vacia"></i>
-                                <i class="skill-vacia"></i>
-                                <i class="skill-vacia"></i>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="skills__elementos" id="skills__elementos">
-                        <span class="skills__KOTLIN" id="skills__KOTLIN">
-                            ADROID/KOTLIN
-                            <div class="skills__grupoSkills" id="skills__grupoSkills">
-                                <i class="skill-llena"></i>
-                                <i class="skill-media"></i>
-                                <i class="skill-vacia"></i>
-                                <i class="skill-vacia"></i>
-                                <i class="skill-vacia"></i>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="skills__elementos" id="skills__elementos">
-                        <span class="skills__SQL" id="skills__SQL">
-                            SQL
-                            <div class="skills__grupoSkills" id="skills__grupoSkills">
-                                <i class="skill-llena"></i>
-                                <i class="skill-llena"></i>
-                                <i class="skill-llena"></i>
-                                <i class="skill-media"></i>
-                                <i class="skill-vacia"></i>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="skills__elementos" id="skills__elementos">
-                        <span class="skills__POSTGRESQL" id="skills__POSTGRESQL">
-                            POSTGRESQL
-                            <div class="skills__grupoSkills" id="skills__grupoSkills">
-                                <i class="skill-llena"></i>
-                                <i class="skill-llena"></i>
-                                <i class="skill-media"></i>
-                                <i class="skill-vacia"></i>
-                                <i class="skill-vacia"></i>
-                            </div>
-                        </span>
-                    </li>
-                    <li class="skills__elementos" id="skills__elementos">
-                        <span class="skills__GITHUB" id="skills__GITHUB">
-                            GITHUB
-                            <div class="skills__grupoSkills" id="skills__grupoSkills">
-                                <i class="skill-llena"></i>
-                                <i class="skill-llena"></i>
-                                <i class="skill-media"></i>
-                                <i class="skill-vacia"></i>
-                                <i class="skill-vacia"></i>
-                            </div>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        </main>
-        <footer class="pieDePagina">
-            <div class="copyright" id="copyright">
-                <h3 class="copyright__titulo">COPYRIGHT</h3>
-                <i class="fa-solid fa-copyright">2022</i>
-            </div>
-            <div class="contactame" id="contactame">
-                <h2 class="contactame__titulo">COMO CONTACTERME:</h3>
-                <i class="fa-brands fa-linkedin"></i>
-                <i class="fa-brands fa-github"></i>
-            </div>
-        </footer>
+            </main>
+            <footer class="pieDePagina">
+                <div class="copyright" id="copyright">
+                    <h3 class="copyright__titulo">COPYRIGHT</h3>
+                    <i class="fa-solid fa-copyright">2022</i>
+                </div>
+                <div class="contactame" id="contactame">
+                    <h2 class="contactame__titulo">COMO CONTACTERME:</h3>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-github"></i>
+                </div>
+            </footer>
+        </div>
         
         <script src="JS/script.js"></script>
     </body>

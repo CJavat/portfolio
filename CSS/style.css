@@ -6,15 +6,16 @@
     --oriental-pink: #c89191;/*ELEMENTOS*/
     --ferra: #6c4b4e;
     --matterhorn: #43333b;
-    --primaryWhite: #fff;
     --regent-gray: #8c949e;
     --storm-gray: #6e6f7c;
     --trout: #515c62;
+    --primary-white: #fff;
+    --primary-black: #000;
 }
 
 * {
     box-sizing: border-box;
-    color: var(--primaryWhite);
+    color: var(--primary-white);
     font-family: 'Roboto', sans-serif;
     list-style: none;
     margin: 0;
@@ -28,9 +29,18 @@ body {
     width: 100%;
 }
 
-/* .cabecera {
-    background-color: var(--ebony-clay);
-} */
+.contenedor-web {
+    width: 100%;
+}
+
+.cabecera {
+    width: 100%;
+}
+
+.contenedorPrincipal {
+    width: 100%;
+}
+
 
 .navegacion {
     align-items: center;
@@ -49,7 +59,7 @@ body {
 }
 
 .logo{
-    border: 2px solid var(--primaryWhite);
+    border: 2px solid var(--primary-white);
     border-radius: 50%;
     height: 3.5rem;
     margin-left: 1rem;
@@ -68,7 +78,7 @@ body {
 }
 
 .bar {
-    background-color: var(--primaryWhite);
+    background-color: var(--primary-white);
     display: block;
     height: 2px;
     margin: 5px 0;
@@ -113,7 +123,7 @@ body {
 .Container__listaNavegacionMobileActived {
     align-items: flex-start;
     background-color: var(--ebony-clay);
-    box-shadow: 0 0.5px 5px #000, 0 -0.2px 2px #000;
+    box-shadow: 0 0.5px 5px var(--primary-black), 0 -0.2px 2px var(--primary-black);
     display: flex;
     flex-flow: column nowrap;
     font-size: 1.5rem;
@@ -158,8 +168,9 @@ body {
     display: flex;
     flex-flow: column nowrap;
     line-height: 2;
-    margin: 5.53rem 0 0 0;
+    margin: 2.5rem 0 0 0;
     padding: 1rem;
+    width: 100%;
 }
 
 .presentacion__imagen {
@@ -202,15 +213,15 @@ body {
     background-color: var(--limed-spruce);
     margin: 0;
     padding: 1rem;
-    width: 100vw;
+    width: 100%;
 }
 
 .saludo__fotoDePerfil {
     border: 6px solid var(--limed-spruce);
     border-radius: 5px;
-    box-shadow: 2px 2px 10px #000, -2px -2px 10px #000;
+    box-shadow: 2px 2px 10px var(--primary-black), -2px -2px 10px var(--primary-black);
     height: 100%;
-    margin-bottom: 3rem;
+    margin: 3rem 0;
     width: 100%;
 }
 
@@ -224,7 +235,7 @@ body {
 .saludo__titulo::after {
     background-color: var(--manatee);
     bottom: 0;
-    color: #000;
+    color: var(--primary-black);
     content: '';
     height: 2px;
     left: 0;
@@ -263,26 +274,37 @@ body {
 }
 
 .saludo__descargarCV {
+    background-color: var(--trout-primary);
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 900;
+    height: 3rem;
     margin: 1.5rem 0;
     padding: 1rem;
     text-align: center;
-    font-size: 0.9rem;
-    font-weight: 900;
-    background-color: var(--trout-primary);
-    border-radius: 8px;
-    width: 10rem;
-    height: 3rem;
     outline: none;
-    border: none;
+    width: 10rem;
 }
 
 /*********CONTENEDOR #2**********************/
 .experiencia {
     background-color: var(--ebony-clay);
-    padding: 1rem;
-    border: 2px solid red;
-    text-align: center;
     line-height: 1.3;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.experiencia::after {/*editar*/
+    content: '';
+    position: absolute;
+    top: 8.5rem;
+    left: 50%;
+    width: 1px;
+    height: 73.45%;
+    background-color: rgba(200, 145, 145, 0.246);
+    z-index: 1;
 }
 
 .experiencia__h2 {
@@ -292,64 +314,186 @@ body {
 
 .experiencia__h3 {
     font-size: 2.3rem;
-
 }
-
-/* .experiencia__h2::after {
-
-} */
 
 .experiencia__contenedor {
-    border: 1px solid var(--trout-primary);
+    align-items: center;
+    background-color: var(--ebony-clay);
+    border: 1px solid var(--oriental-pink);
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 35rem;
+    justify-content: space-evenly;
     margin: 3.5rem 0;
     position: relative;
+    width: 100%;
+    z-index: 3;
 }
 
+.experiencia__contenedor img{
+    width: 50%;
+    filter: drop-shadow(0 0 1px white) drop-shadow(0 0 1px white) drop-shadow(0 0 1px white) drop-shadow(0 0 1px white);
+}
 
 .experiencia__contenedor::before {
-    content: '';
-    width: 0.5rem;
-    height: 0.5rem;
-    background-color: red;
+    background-color: var(--oriental-pink);
     border-radius: 100%;
+    box-shadow: 0 0 10px var(--oriental-pink);
+    content: '';
+    height: 0.7rem;
+    left: 50%;
+    margin: -1.7rem 0 0 -0.35rem;
     position: absolute;
     top: 0;
-    text-align: center;
-    margin: -1.3rem 0;
+    width: 0.7rem;
 }
 
+.experiencia__fecha::before {
+    background-color: var(--ebony-clay);
+    border-right: 1px solid var(--oriental-pink);
+    border-top: 1px solid var(--oriental-pink);
+    content: '';
+    height: 0.5rem;
+    left: 50%;
+    margin: -0.33rem 0 0 -0.259rem;
+    position: absolute;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 0.5rem;
+    z-index: 2;
+}
 
+.experiencia__fecha {
+    color: var(--oriental-pink);
+    font-weight: lighter;
+}
 
+.experiencia__titulo {
+    border-bottom: 1px solid var(--limed-spruce);
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.experiencia__descripcion {
+    line-height: 1.3;
+    margin: 0 1rem;
+}
 
 /*********CONTENEDOR #3**********************/
 .aptitudes {
     background-color: var(--limed-spruce);
+    padding: 1rem;
 }
+
+.aptitudes__bordes {
+    border: 1px solid var(--manatee);
+    border-radius: 5px;
+    margin: 3rem 0;
+    padding: 1rem;
+}
+
+.aptitudes__titulo {
+    color: var(--oriental-pink);
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.aptitudes__cruz {
+    color: var(--oriental-pink);
+}
+
 /*********CONTENEDOR #4**********************/
 .skills {
     background-color: var(--ebony-clay);
+    padding: 1rem;
 }
+
+.skills__bordes {
+    border: 1px solid var(--oriental-pink);
+    border-radius: 5px;
+    margin: 3rem 0;
+    padding: 1rem;
+}
+
+.skills__titulo {
+    font-size: 2rem;
+    color: var(--oriental-pink);
+    font-weight: lighter;
+}
+
+.skills__bordes ul {
+    padding-left: 1rem;
+}
+
+.skills__elementos {
+    font-size: 1.5rem;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*********PIE DE PAGINA**********************/
 .pieDePagina {
@@ -361,31 +505,66 @@ body {
 
 /***********ESTILOS A LOS SKILLS********************************/
 .skills__grupoSkills {
-    background-color: var(--trout-primary);
+    background-color: var(--ebony-clay);
+    border-bottom: 1px solid var(--oriental-pink);
     display: inline-flex;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
 }
 
 .skill-vacia {
     background-color: transparent;
     border: 2px solid black;
-    border-radius: 15px;
-    height: 15px;
-    width: 15px;
+    border-radius: 100%;
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
 .skill-media {
-    background: linear-gradient(to right, var(--ebony-clay) 0%, var(--ebony-clay) 50%, transparent 50%, transparent 100% );
+    background: linear-gradient(to right, var(--primary-black) 0%, var(--primary-black) 50%, transparent 50%, transparent 100% );
     border: 2px solid black;
-    border-radius: 15px;
-    height: 15px;
-    width: 15px;
+    border-radius: 100%;
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
 .skill-llena {
-    background-color: var(--ebony-clay);
+    background-color: var(--primary-black);
     border: 2px solid black;
-    border-radius: 15px;
-    height: 15px;
-    width: 15px;
-    color: white;
+    border-radius: 100%;
+    height: 1.5rem;
+    width: 1.5rem;
 }
+
+.skills__HTML::after {
+    content: '-----------80%';
+    width: 7.7rem;
+    height: 2rem;
+    position: absolute;
+    bottom: 0.92rem;
+    left: 51.8%;
+}
+
+/*
+    content: '-----------80%';
+    width: 7.7rem;
+    height: 2rem;
+    position: absolute;
+    bottom: 0.92rem;
+    left: 51%;
+*/
+
+
+/*
+    100% -->    5 Bolitas
+    90%  -->  4.5 Bolitas
+    80%  -->    4 Bolitas
+    70%  -->  3.5 Bolitas
+    60%  -->    3 Bolitas
+    50%  -->  2.5 Bolitas
+    40%  -->    2 Bolitas
+    30%  -->  1.5 Bolitas
+    20%  -->    1 Bolita
+    10%  -->   .5 Bolita
+*/
