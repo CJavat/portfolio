@@ -28,6 +28,10 @@ body {
     width: 100%;
 }
 
+/* .cabecera {
+    background-color: var(--ebony-clay);
+} */
+
 .navegacion {
     align-items: center;
     background-color: var(--ebony-clay);
@@ -150,10 +154,12 @@ body {
 
 .presentacion {
     align-items: flex-start;
+    background-color: var(--ebony-clay);
     display: flex;
     flex-flow: column nowrap;
     line-height: 2;
-    margin: 6rem 0.5rem 1rem 1.5rem;
+    margin: 5.53rem 0 0 0;
+    padding: 1rem;
 }
 
 .presentacion__imagen {
@@ -194,7 +200,7 @@ body {
 /*********CONTENEDOR #1**********************/
 .saludo {
     background-color: var(--limed-spruce);
-    margin: 1.5rem 0 0 0;
+    margin: 0;
     padding: 1rem;
     width: 100vw;
 }
@@ -332,6 +338,11 @@ body {
 /*********CONTENEDOR #4**********************/
 .skills {
     background-color: var(--ebony-clay);
+}
+
+/*********PIE DE PAGINA**********************/
+.pieDePagina {
+    background-color: var(--limed-spruce);
 }
 
 
