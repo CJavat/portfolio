@@ -382,14 +382,26 @@ body {
 /*********CONTENEDOR #3**********************/
 .aptitudes {
     background-color: var(--limed-spruce);
-    padding: 1rem;
+    padding: 1rem 0.5rem;
 }
 
 .aptitudes__bordes {
     border: 1px solid var(--manatee);
     border-radius: 5px;
-    margin: 3rem 0;
+    margin: 1rem 0;
     padding: 1rem;
+}
+
+.aptitudes__lista {
+    margin-top: 1.5rem;
+
+}
+
+.aptitudes__elementos {
+    display: grid;
+    grid-template-columns: 2rem repeat(1, minmax(2rem, 1fr));
+    grid-auto-rows: 1fr;
+    margin: 1rem 0;
 }
 
 .aptitudes__titulo {
@@ -400,6 +412,11 @@ body {
 
 .aptitudes__cruz {
     color: var(--oriental-pink);
+    grid-column: 1 / 2;
+}
+
+.aptitudes__concepto {
+    grid-column: 2 / 3;
 }
 
 /*********CONTENEDOR #4**********************/
@@ -430,14 +447,14 @@ body {
     display: flex;
     flex-flow: column nowrap;
 }
-
+/*VER PORQUE EL AFTER ME EXTIENE EL BODY Y ARREGLARLO*/
 .skills__HTML::after {
     bottom: 0.6rem;
     content: '80%';
     height: 2rem;
     left: 80%;
     position: absolute;
-    width: 7.7rem;
+    width: 3rem;
 }
 
 .skills__CSS::after {
@@ -446,7 +463,7 @@ body {
     height: 2rem;
     left: 80%;
     position: absolute;
-    width: 7.7rem;
+    width: 3rem;
 }
 
 .skills__JAVASCRIPT::after {
@@ -455,7 +472,7 @@ body {
     height: 2rem;
     left: 80%;
     position: absolute;
-    width: 7.7rem;
+    width: 3rem;
 }
 
 .skills__C-Sharp::after {
@@ -464,7 +481,7 @@ body {
     height: 2rem;
     left: 80%;
     position: absolute;
-    width: 7.7rem;
+    width: 3rem;
 }
 
 .skills__JAVA::after {
@@ -473,7 +490,7 @@ body {
     height: 2rem;
     left: 80%;
     position: absolute;
-    width: 7.7rem;
+    width: 3rem;
 }
 
 .skills__C-PLUSPLUS::after {
@@ -482,7 +499,7 @@ body {
     height: 2rem;
     left: 80%;
     position: absolute;
-    width: 7.7rem;
+    width: 3rem;
 }
 
 .skills__PYTHON::after {
@@ -491,7 +508,7 @@ body {
     height: 2rem;
     left: 80%;
     position: absolute;
-    width: 7.7rem;
+    width: 3rem;
 }
 
 .skills__PHP::after {
@@ -500,7 +517,7 @@ body {
     height: 2rem;
     left: 80%;
     position: absolute;
-    width: 7.7rem;
+    width: 3rem;
 }
 
 .skills__Android::after {
@@ -509,16 +526,16 @@ body {
     height: 2rem;
     left: 80%;
     position: absolute;
-    width: 7.7rem;
+    width: 3rem;
 }
 
 .skills__SQL::after {
     bottom: 0.6rem;
-    content: '70%';
+    content:  '70%';
     height: 2rem;
     left: 80%;
     position: absolute;
-    width: 7.7rem;
+    width: 3rem;
 }
 
 .skills__POSTGRESQL::after {
@@ -527,7 +544,7 @@ body {
     height: 2rem;
     left: 80%;
     position: absolute;
-    width: 7.7rem;
+    width: 3rem;
 }
 
 .skills__GITHUB::after {
@@ -536,86 +553,14 @@ body {
     height: 2rem;
     left: 80%;
     position: absolute;
-    width: 7.7rem;
+    width: 3rem;
 }
-
-/*
-    100% -->    5 Bolitas
-    90%  -->  4.5 Bolitas
-    80%  -->    4 Bolitas
-    70%  -->  3.5 Bolitas
-    60%  -->    3 Bolitas
-    50%  -->  2.5 Bolitas
-    40%  -->    2 Bolitas
-    30%  -->  1.5 Bolitas
-    20%  -->    1 Bolita
-    10%  -->   .5 Bolita
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*********PIE DE PAGINA**********************/
 .pieDePagina {
     background-color: var(--limed-spruce);
+    padding: 1.5rem;
+
 }
 
 
