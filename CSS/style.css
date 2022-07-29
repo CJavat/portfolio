@@ -24,7 +24,6 @@
 }
 
 body {
-    /* background-color: var(--ebony-clay); */
     box-sizing: border-box;
     width: 100%;
 }
@@ -144,6 +143,8 @@ body {
 .listaNavegacionMobile {
     display: flex;
     flex-flow: column wrap;
+    list-style: none;
+    text-decoration: none;
 }
 
 .elementolistaMobile {
@@ -195,17 +196,16 @@ body {
 }
 
 .presentacion__boton {
-    margin: 1.5rem 0;
-    padding: 1rem;
-    text-align: center;
+    background-color: var(--trout-primary);
+    border: none;
+    border-radius: 8px;
     font-size: 0.9rem;
     font-weight: 900;
-    background-color: var(--trout-primary);
-    border-radius: 8px;
-    width: 10rem;
     height: 3rem;
+    margin: 1.5rem 0;
     outline: none;
-    border: none;
+    text-align: center;
+    width: 10rem;
 }
 
 /*********CONTENEDOR #1**********************/
@@ -281,7 +281,6 @@ body {
     font-weight: 900;
     height: 3rem;
     margin: 1.5rem 0;
-    padding: 1rem;
     text-align: center;
     outline: none;
     width: 10rem;
@@ -432,7 +431,126 @@ body {
     flex-flow: column nowrap;
 }
 
+.skills__HTML::after {
+    bottom: 0.6rem;
+    content: '80%';
+    height: 2rem;
+    left: 80%;
+    position: absolute;
+    width: 7.7rem;
+}
 
+.skills__CSS::after {
+    bottom: 0.6rem;
+    content: '50%';
+    height: 2rem;
+    left: 80%;
+    position: absolute;
+    width: 7.7rem;
+}
+
+.skills__JAVASCRIPT::after {
+    bottom: 0.6rem;
+    content: '50%';
+    height: 2rem;
+    left: 80%;
+    position: absolute;
+    width: 7.7rem;
+}
+
+.skills__C-Sharp::after {
+    bottom: 0.6rem;
+    content: '30%';
+    height: 2rem;
+    left: 80%;
+    position: absolute;
+    width: 7.7rem;
+}
+
+.skills__JAVA::after {
+    bottom: 0.6rem;
+    content: '50%';
+    height: 2rem;
+    left: 80%;
+    position: absolute;
+    width: 7.7rem;
+}
+
+.skills__C-PLUSPLUS::after {
+    bottom: 0.6rem;
+    content: '50%';
+    height: 2rem;
+    left: 80%;
+    position: absolute;
+    width: 7.7rem;
+}
+
+.skills__PYTHON::after {
+    bottom: 0.6rem;
+    content: '30%';
+    height: 2rem;
+    left: 80%;
+    position: absolute;
+    width: 7.7rem;
+}
+
+.skills__PHP::after {
+    bottom: 0.6rem;
+    content: '30%';
+    height: 2rem;
+    left: 80%;
+    position: absolute;
+    width: 7.7rem;
+}
+
+.skills__Android::after {
+    bottom: 0.6rem;
+    content: '30%';
+    height: 2rem;
+    left: 80%;
+    position: absolute;
+    width: 7.7rem;
+}
+
+.skills__SQL::after {
+    bottom: 0.6rem;
+    content: '70%';
+    height: 2rem;
+    left: 80%;
+    position: absolute;
+    width: 7.7rem;
+}
+
+.skills__POSTGRESQL::after {
+    bottom: 0.6rem;
+    content: '50%';
+    height: 2rem;
+    left: 80%;
+    position: absolute;
+    width: 7.7rem;
+}
+
+.skills__GITHUB::after {
+    bottom: 0.6rem;
+    content: '50%';
+    height: 2rem;
+    left: 80%;
+    position: absolute;
+    width: 7.7rem;
+}
+
+/*
+    100% -->    5 Bolitas
+    90%  -->  4.5 Bolitas
+    80%  -->    4 Bolitas
+    70%  -->  3.5 Bolitas
+    60%  -->    3 Bolitas
+    50%  -->  2.5 Bolitas
+    40%  -->    2 Bolitas
+    30%  -->  1.5 Bolitas
+    20%  -->    1 Bolita
+    10%  -->   .5 Bolita
+*/
 
 
 
@@ -536,35 +654,3 @@ body {
     height: 1.5rem;
     width: 1.5rem;
 }
-
-.skills__HTML::after {
-    content: '-----------80%';
-    width: 7.7rem;
-    height: 2rem;
-    position: absolute;
-    bottom: 0.92rem;
-    left: 51.8%;
-}
-
-/*
-    content: '-----------80%';
-    width: 7.7rem;
-    height: 2rem;
-    position: absolute;
-    bottom: 0.92rem;
-    left: 51%;
-*/
-
-
-/*
-    100% -->    5 Bolitas
-    90%  -->  4.5 Bolitas
-    80%  -->    4 Bolitas
-    70%  -->  3.5 Bolitas
-    60%  -->    3 Bolitas
-    50%  -->  2.5 Bolitas
-    40%  -->    2 Bolitas
-    30%  -->  1.5 Bolitas
-    20%  -->    1 Bolita
-    10%  -->   .5 Bolita
-*/
