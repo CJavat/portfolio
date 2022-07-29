@@ -289,9 +289,9 @@ body {
 
 }
 
-.experiencia__h2::after {
-    
-}
+/* .experiencia__h2::after {
+
+} */
 
 .experiencia__contenedor {
     border: 1px solid var(--trout-primary);
