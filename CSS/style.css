@@ -150,7 +150,7 @@ body {
     margin: 15px 0;
 }
 
-.contactameMobile{
+.contratameMobile{
     background-color: transparent;
     border: none;
     font-size: 1.5rem;
@@ -404,13 +404,13 @@ body {
 }
 
 .aptitudes__titulo {
-    color: var(--oriental-pink);
+    color: var(--manatee);
     font-weight: bold;
     opacity: 0.8;
 }
 
 .aptitudes__cruz {
-    color: var(--oriental-pink);
+    color: var(--manatee);
     grid-column: 1 / 2;
 }
 
@@ -446,7 +446,7 @@ body {
     display: flex;
     flex-flow: column nowrap;
 }
-/*VER PORQUE EL AFTER ME EXTIENE EL BODY Y ARREGLARLO*/
+
 .skills__HTML::after {
     bottom: 0.6rem;
     content: '80%';
@@ -555,9 +555,149 @@ body {
     width: 3rem;
 }
 
+/*********CONTENEDOR #5**********************/
+.contactame {
+    background-color: var(--limed-spruce);
+    height: 75rem;
+    padding: 1rem;
+}
+
+.contactame__informacion {
+    margin: 0 0 2rem 0;
+}
+
+.contactame__titulos {
+    line-height: 1.5;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.contactame__titulos::after {
+    background-color: var(--manatee);
+    content: '';
+    height: 2px;
+    left: 1%;
+    position: absolute;
+    top: 100%;
+    width: 25%;
+}
+
+.contactame__titulo {
+    color: var(--manatee);
+    font-size: 1.5rem;
+}
+
+.contactame__subtitulo {
+    font-size: 1.7rem;
+}
+
+.contactame__ubicacion {
+    align-content: stretch;
+    align-items: center;
+    border: 1px solid var(--manatee);
+    border-radius: 5px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+}
+
+.contactame__email{
+    align-content: stretch;
+    align-items: center;
+    border: 1px solid var(--manatee);
+    border-radius: 5px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+}
+
+.contactame__celular{
+    align-content: stretch;
+    align-items: center;
+    border: 1px solid var(--manatee);
+    border-radius: 5px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+}
+
+.contactame__contenido{
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.contactame__icono{
+    font-size: 2.5rem;
+    margin-right: 1rem;
+}
+
+.contactame__icono i{
+    color: var(--manatee);
+}
+
+.contactame__formulario{
+    margin: 1rem 0;
+}
+
+.contactame__form {
+    height: 37rem;
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+
+.form__nombre {
+    background-color: transparent;
+    border: 1px solid #888a9c38;
+    border-radius: 5px;
+    margin: 1.5rem 0;
+    padding: 1rem;
+}
+
+.form__email {
+    background-color: transparent;
+    border: 1px solid #888a9c38;
+    border-radius: 5px;
+    margin: 1.5rem 0;
+    padding: 1rem;
+}
+
+.form__asunto {
+    background-color: transparent;
+    border: 1px solid #888a9c38;
+    border-radius: 5px;
+    margin: 1.5rem 0;
+    padding: 1rem;
+}
+
+.form__mensaje{
+    background-color: transparent;
+    border: 1px solid #888a9c38;
+    border-radius: 5px;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    resize: none;
+    height: 100rem;
+}
+
+.form__enviar-mensaje {
+    background-color: var(--manatee);
+    border: none;
+    border-radius: 5px;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    width: 10rem;
+}
+
 /*********PIE DE PAGINA**********************/
 .pieDePagina {
-    background-color: var(--limed-spruce);
+    background-color: var(--ebony-clay);
     height: 25rem;
     padding: 1rem;
     text-align: center;
@@ -581,11 +721,11 @@ body {
     width: 4.5rem;
 }
 
-.contactame {
+.conoceme {
     font-size: 2rem;
 }
 
-.contactame i{
+.conoceme i{
     border: 1px solid var(--oriental-pink);
     border-radius: 100%;
     padding: 1rem;
@@ -593,12 +733,13 @@ body {
 }
 
 .copyright {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     line-height: 2;
+    margin: 0 1rem;
 }
 
-.copyright i{
-    font-size: 0.8rem;
+.copyright__fecha{
+    font-size: 1rem;
 }
 
 /***********ESTILOS A LOS SKILLS********************************/

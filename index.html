@@ -31,7 +31,7 @@
                             <li class="elementolistaMobile" id="elementolistaMobile"><a href="#" class="aptitudesLIMobile" id="aptitudesLIMobile">Aptitudes</a></li>
                             <li class="elementolistaMobile" id="elementolistaMobile"><a href="#" class="skillsLIMobile" id="skillsLIMobile">Skills</a></li>
                         </ul>
-                        <button type="submit" class="contactameMobile" id="contactameMobile">Contáctame</button>
+                        <button type="submit" class="contratameMobile" id="contratameMobile">Contáctame</button>
                     </div>
                     <div class="Container__listaNavegacionDesktop" id="Container__listaNavegacionDesktop">
                         <ul class="listaNavegacionDesktop">
@@ -40,7 +40,7 @@
                             <li class="elementolistaDesktop" id="elementolistaDesktop"><a href="#" class="aptitudesLIDesktop" id="aptitudesLIDesktop">Aptitudes</a></li>
                             <li class="elementolistaDesktop" id="elementolistaDesktop"><a href="#" class="skillsLIDesktop" id="skillsLIDesktop">Skills</a></li>
                         </ul>
-                        <button type="submit" class="contactameDesktop" id="contactameDesktop">Contáctame</button>
+                        <button type="submit" class="contratameDesktop" id="contratameDesktop">Contáctame</button>
                     </div>
                 </nav>
                 <div class="presentacion" id="presentacion">
@@ -303,17 +303,64 @@
                         </ul>
                     </div>
                 </div>
+                <div class="contactame">
+                    <div class="contactame__informacion">
+                        <div class="contactame__titulos">
+                            <h2 class="contactame__titulo">Contáctame</h2>
+                            <h3 class="contactame__subtitulo">Con Un Click</h3>
+                        </div>
+                        <div class="contactame__ubicacion">
+                            <div class="contactame__contenido">
+                                <h2 class="ubicacion__titulo">UBICACIÓN</h2>
+                                <p class="ubicacion__parrafo">Guadalajara, México</p>
+                                <p class="ubicacion__parrafo">Indígena de Mezquitán</p>
+                            </div>
+                            <div class="contactame__icono">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                        </div>
+                        <div class="contactame__email">
+                            <div class="contactame__contenido">
+                                <h2 class="email__titulo">E-MAIL</h2>
+                                <p class="email__parrafo">cdpm98@hotmail.com</p>
+                                <p class="email__parrafo">cdpm_98@hotmail.com</p>
+                            </div>
+                            <div class="contactame__icono">
+                                <i class="fa-solid fa-envelope-open-text"></i>
+                            </div>
+                        </div>
+                        <div class="contactame__celular">
+                            <div class="contactame__contenido">
+                                <h2 class="celular__titulo">CELULAR</h2>
+                                <p class="celular__parrafo">+52 33 1213-5312</p>
+                                <p class="celular__parrafo">+52 33 2498 1060</p>
+                            </div>
+                            <div class="contactame__icono">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contactame__formulario">
+                        <form class="contactame__form" action="mail.php" method="post">
+                            <input type="text" class="form__nombre" id="form__nombre" placeholder="NOMBRE" required>
+                            <input type="text" class="form__email" id="form__email" placeholder="E-MAIL" required>
+                            <input type="text" class="form__asunto" id="form__asunto" placeholder="ASUNTO" required>
+                            <textarea name="form__mensaje" id="form__mensaje" class="form__mensaje" placeholder="ESCRIBE TU MENSAJE" required></textarea>
+                            <button class="form__enviar-mensaje">ENVIAR MENSAJE</button>
+                        </form>
+                    </div>
+                </div>
             </main>
             <footer class="pieDePagina">
                 <div class="pieDePagina__bordes">
                     <img src="IMG/CP-Logo.png" alt="logo" class="pideDePagina__logo">
-                    <div class="contactame" id="contactame">
+                    <div class="conoceme" id="conoceme">
                         <i class="fa-brands fa-linkedin-in"></i>
                         <i class="fa-brands fa-github"></i>
                     </div>
                     <div class="copyright" id="copyright">
                         <h2 class="copyright__titulo">TODOS LOS DERECHOS RESERVADOS</h3>
-                        <i class="fa-solid fa-copyright">2022</i>
+                        <p class="copyright__fecha">© 2022</p>
                     </div>
                 </div>
             </footer>
