@@ -40,3 +40,82 @@ function desplazarMenu() {
         }
     });
 }
+
+
+/* PROBANDOLA API PARA LA ANIMACION.*/
+
+// Crear el observador (Intersection Observer API)
+// En la función anónima se recibe una lista de entradas, no importa que solo se observe un elemento
+let observer = new IntersectionObserver(entries => {
+    // Recorrer las entradas recibidas
+    entries.forEach(entry => {
+        // Está visible en el viewport
+            if (entry.intersectionRatio > 0) {
+                // entry.target es el elemento que se está observando
+                // Agregar la clase para animar
+                entry.target.classList.add('animacion-de-prueba1');
+                // Dejar de observar
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+// Observar elemento a animar
+observer.observe(document.querySelector('.pieDePagina__bordes'));
+/***************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* AGREGAR ANIMACION CSS (PRUEBA) 
+CREAR NUEVA CLASE Y AGREGARSELA CADA QUE SE VEA EN EL VIEWPORT {
+    .experiencia__contenedor:nth-child(odd) {
+        left: -20rem;
+    }
+
+    .experiencia__contenedor:nth-child(odd) {
+        transform-origin: 0 0;
+        transform: translateX(20rem);
+        transition: transform 6s;
+    }
+}
+
+CREAR NUEVA CLASE Y AGREGARSELA CADA QUE SE VEA EN EL VIEWPORT {
+    .experiencia__contenedor:nth-child(even) {
+    }
+
+    .experiencia__contenedor:nth-child(even) {
+        transform-origin: 0 0;
+        transform: translateX(-20rem);
+        transition: transform 6s;
+    }
+}
+*/
