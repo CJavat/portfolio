@@ -41,6 +41,15 @@ function desplazarMenu() {
     });
 }
 
+/* CARGA FORZADA.*/
+let btnCarga = document.querySelector('.reloadforce');
+
+btnCarga.addEventListener('click', ()=>{
+    location.reload();
+});
+
+/***************/
+
 
 /* PROBANDOLA API PARA LA ANIMACION.*/
 

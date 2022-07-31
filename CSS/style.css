@@ -797,11 +797,24 @@ body {
 
 .pieDePagina__bordes{
     position: relative;
-    left: 40rem;
+    left: -20rem;
 }
 
 .animacion-de-prueba1 {
     transform-origin: 0 0;
-    transform: translate(-40rem);
+    transform: translate(40rem);
     transition: transform 5s;
+}
+
+.reloadforce {
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    left: 0;
+    padding: 0.5rem;
+    position: fixed;
+    top: 17%;
+    z-index: 999999999;
 }
