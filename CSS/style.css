@@ -31,6 +31,7 @@ body {
 
 .contenedor-web {
     width: 100%;
+    /* padding: 0 10% 0 10%; */
 }
 
 .cabecera {
@@ -39,6 +40,7 @@ body {
 
 .contenedorPrincipal {
     width: 100%;
+    margin: 0 auto 0 auto;
 }
 
 .navegacion {
@@ -122,7 +124,7 @@ body {
 .Container__listaNavegacionMobileActived {
     align-items: flex-start;
     background-color: var(--ebony-clay);
-    box-shadow: 0 0.5px 5px var(--primary-black), 0 -0.2px 2px var(--primary-black);
+    box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
     display: flex;
     flex-flow: column nowrap;
     font-size: 1.5rem;
@@ -145,10 +147,16 @@ body {
     flex-flow: column wrap;
     list-style: none;
     text-decoration: none;
+    padding-left: 0;
 }
 
 .elementolistaMobile {
     margin: 15px 0;
+}
+
+.elementolistaMobile a {
+    color: var(--primary-white);
+    text-decoration: none;
 }
 
 .contratameMobile{
@@ -293,6 +301,7 @@ body {
     padding: 1rem;
     text-align: center;
     position: relative;
+    overflow-x: hidden;
 }
 
 .experiencia::after {/*editar*/
@@ -565,6 +574,7 @@ body {
 
 .contactame__informacion {
     margin: 0 0 2rem 0;
+    overflow-x: hidden;
 }
 
 .contactame__titulos {
@@ -709,7 +719,7 @@ body {
     border: none;
     border-radius: 5px;
     margin: 1.5rem 0;
-    padding: 1rem;
+    padding: 1rem; /*padding: 0.5rem; (cuando ponga el BOOTSTRAP)*/
     width: 10rem;
 }
 
@@ -803,15 +813,99 @@ body {
 
 .moverIzq-Der {
     transform-origin: 0 0;
-    transform: translate(20rem);
+    transform: translate(50rem);
     transition: transform 5s;
 }
 
 .moverDer-Izq {
     transform-origin: 0 0;
-    transform: translate(-20rem);
+    transform: translate(-50rem);
     transition: transform 5s;
 }
+
+
+/*ANIMACIONES*/
+.hortomallas {
+    left: 50rem;
+}
+
+.gdl-circuits {
+    right: 50rem;
+}
+
+.uteg {
+    left: 50rem;
+}
+
+.cetis {
+    right: 50rem;
+}
+
+.contactame__ubicacion {
+    position: relative;
+    right: 50rem;
+}
+
+.contactame__email {
+    position: relative;
+    left: 50rem;
+}
+
+.contactame__celular{
+    position: relative;
+    right: 50rem;
+}
+
+.pieDePagina__bordes {
+    left: 50rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .reloadforce {
     background-color: black;
