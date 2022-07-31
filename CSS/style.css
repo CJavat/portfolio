@@ -25,6 +25,7 @@
 
 body {
     box-sizing: border-box;
+    overflow-x: hidden;
     width: 100%;
 }
 
@@ -716,8 +717,8 @@ body {
 .pieDePagina {
     background-color: var(--ebony-clay);
     height: 25rem;
-    padding: 1rem;
     text-align: center;
+    overflow-x: hidden;
 }
 
 .pieDePagina__bordes {
@@ -726,8 +727,12 @@ body {
     border-radius: 5px;
     display: flex;
     flex-flow: column nowrap;
-    height: 100%;
     justify-content: space-evenly;
+    left: 20rem;
+    margin: 1rem auto;
+    position: relative;
+    top: 0.5rem;
+    width: 90%;
 }
 
 .pideDePagina__logo {
@@ -736,10 +741,12 @@ body {
     box-shadow: 0rem 0rem 5px var(--primary-white);
     height: 4.5rem;
     width: 4.5rem;
+    margin: 1rem;
 }
 
 .conoceme {
     font-size: 2rem;
+    margin: 1rem;
 }
 
 .conoceme i{
@@ -752,11 +759,12 @@ body {
 .copyright {
     font-size: 0.6rem;
     line-height: 2;
-    margin: 0 1rem;
+    margin: 1rem 1rem;
 }
 
 .copyright__fecha{
     font-size: 1rem;
+    margin: 1rem;
 }
 
 /***********ESTILOS A LOS SKILLS********************************/
@@ -793,16 +801,15 @@ body {
     width: 1.5rem;
 }
 
-
-
-.pieDePagina__bordes{
-    position: relative;
-    left: -20rem;
+.moverIzq-Der {
+    transform-origin: 0 0;
+    transform: translate(20rem);
+    transition: transform 5s;
 }
 
-.animacion-de-prueba1 {
+.moverDer-Izq {
     transform-origin: 0 0;
-    transform: translate(40rem);
+    transform: translate(-20rem);
     transition: transform 5s;
 }
 

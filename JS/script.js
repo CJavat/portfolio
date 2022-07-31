@@ -62,7 +62,7 @@ let observer = new IntersectionObserver(entries => {
             if (entry.intersectionRatio > 0) {
                 // entry.target es el elemento que se está observando
                 // Agregar la clase para animar
-                entry.target.classList.add('animacion-de-prueba1');
+                entry.target.classList.add('moverDer-Izq');
                 // Dejar de observar
                 observer.unobserve(entry.target);
             }
