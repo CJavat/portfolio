@@ -333,20 +333,8 @@ body {
     left: -20rem;
 }
 
-.experiencia__contenedor:nth-child(even) {
-    align-items: center;
-    background-color: var(--ebony-clay);
-    border: 1px solid var(--oriental-pink);
-    border-radius: 5px;
-    display: flex;
-    flex-flow: column nowrap;
-    height: 35rem;
-    justify-content: space-evenly;
-    margin: 3.5rem 0;
-    position: relative;
-    width: 100%;
-    z-index: 3;
-}
+/* .experiencia__contenedor:nth-child(even) {
+} */
 
 .experiencia__contenedor img{
     width: 50%;
