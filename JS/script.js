@@ -11,7 +11,7 @@ function desplazarMenu() {
     menuMobile.addEventListener("click", ()=>{
         if(bandera === false) {
             bandera = true;
-            listaNavegacion.style.transition = "transform 1S ease-in-out, visibility 1s ease-in-out"
+            listaNavegacion.style.transition = "transform .5S ease-in-out, visibility .5s ease-in-out"
             listaNavegacion.className = "Container__listaNavegacionMobileActived";
             
             menuMobile.style.transform = "rotate(-45deg)";
@@ -27,7 +27,7 @@ function desplazarMenu() {
             bandera = false;
             
             listaNavegacion.className = "Container__listaNavegacionMobile";
-            listaNavegacion.style.transition = "transform 1S ease-in-out, visibility 1s ease-in-out"
+            listaNavegacion.style.transition = "transform .5S ease-in-out, visibility .5s ease-in-out"
             
             menuMobile.style.transform = "rotate(0)";
             menuMobile.style.transition = "transform 2s";

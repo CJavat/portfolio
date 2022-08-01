@@ -868,7 +868,14 @@ body {
 
 
 /*#region MEDIA QUERIES*/
-@media screen and (max-width: 465px) {
+/*
+    orientation: landscape - portrait;
+    portrait ---> orientacion del teléfono en vertical.
+    landscape --> orientacion del teléfono en horizontal.
+*/
+
+/*MOVILES PARA PANTALLAS CON MENOS DE 465PX*/
+@media only screen and (max-width: 465px) and (orientation: portrait) {
     .contenedor-web {
         width: 100%;
         padding: 0;
@@ -880,6 +887,94 @@ body {
         padding-top: 5.5rem;
     }
 }
+
+@media only screen and (max-height: 465px) and (orientation: landscape) {
+    .contenedor-web {
+        width: 100%;
+        padding: 0;
+    }
+    /*#region CABECERA*/
+    
+    /*#region BARRA DE NAVEGACIÓN*/
+    .navegacion {
+        height: 3rem;
+        line-height: 0.2;
+        padding: 0 0.5rem;
+        width: 100vw;
+    }
+
+    .logo{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    .Container__listaNavegacionMobile {
+        align-items: center;
+        top: 3rem;
+    }
+
+    .Container__listaNavegacionMobileActived {
+        align-items: center;
+        top: 3rem;
+    }
+
+    .listaNavegacionMobile a:hover {
+        color: var(--regent-gray);
+    }
+    
+    .contratameMobile:hover{
+        color: var(--regent-gray);
+    }
+
+    /*#endregion BARRA DE NAVEGACION*/
+    /*#region PRESENTACIÓN*/
+    .presentacion {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+        grid-template-rows: repeat(3, 6.66666666667rem);
+        justify-items: center;
+        align-items: center;
+    }
+
+    .presentacion__imagen {
+        grid-column: 1 / span 4;
+        grid-row: 1 / span 3;
+    }
+
+    .presentacion__titulo {
+        grid-column: span 2;
+        grid-row: 1 / 2;
+        justify-self: start;
+    }
+    
+    .presentacion__subtitulo {
+        grid-column: span 5;
+        grid-row: 2 / 3;
+    }
+    
+    .presentacion__descripcion {
+        justify-self: start;
+        grid-column: span 5;
+        grid-row: 3 / 4;
+    }
+
+    .presentacion__boton {
+        grid-column: span 4;
+        grid-row: 1;
+    }
+    /*#endregion PRESENTACIÓN*/
+    /*#endregion CABECERA*/
+}
+
+
+
+
+
+
+
+
+
+
 /*#endregion MEDIA QUERIES*/
 
 
