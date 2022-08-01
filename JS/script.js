@@ -23,7 +23,7 @@ function desplazarMenu() {
             ultimaBarra.style.transform = "rotate(-90deg) translateY(7px)";
             ultimaBarra.style.transition = "transform 2s";
         }
-        else {
+        else {s
             bandera = false;
             
             listaNavegacion.className = "Container__listaNavegacionMobile";
