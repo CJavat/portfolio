@@ -847,13 +847,13 @@ body {
 
 /*#region POSICIONAR LOS ELEMENTOS QUE SE VAN A ANIMAR*/
 .izquierda {
-    transform: translateX(-20rem);
-    opacity: 0;
+    transform: translateX(-15rem);
+    opacity: 1;
 }
 
 .derecha {
     opacity: 0;
-    transform: translateX(20rem);
+    transform: translateX(15rem);
 }
 /*#endregion POSICIONAR LOS ELEMENTOS QUE SE VAN A ANIMAR*/
 
