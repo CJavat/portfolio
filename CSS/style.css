@@ -1,3 +1,4 @@
+/*#region VIEWPORT*/
 :root {
     --ebony-clay: #1e212e;       /*PRIMER COLOR PRINCIPAL*/
     --limed-spruce: #32444b;    /*SEGUNDO COLOR PRINCIPAL*/
@@ -28,21 +29,18 @@ body {
     overflow-x: hidden;
     width: 100%;
 }
+/*#endregion VIEWPORT*/
 
 .contenedor-web {
     width: 100%;
     /* padding: 0 10% 0 10%; */
 }
 
+/*#region CABECERA*/
 .cabecera {
     width: 100%;
 }
-
-.contenedorPrincipal {
-    width: 100%;
-    margin: 0 auto 0 auto;
-}
-
+/*#region BARRA DE NAVEGACIÓN*/
 .navegacion {
     align-items: center;
     background-color: var(--ebony-clay);
@@ -170,7 +168,8 @@ body {
 .Container__listaNavegacionDesktop { /* EDITAR MENU EN VERSION ESCRITORIO. */
     display: none;
 }
-
+/*#endregion BARRA DE NAVEGACION*/
+/*#region PRESENTACIÓN*/
 .presentacion {
     align-items: flex-start;
     background-color: var(--ebony-clay);
@@ -215,8 +214,16 @@ body {
     text-align: center;
     width: 10rem;
 }
+/*#endregion PRESENTACIÓN*/
+/*#endregion CABECERA*/
 
-/*********CONTENEDOR #1**********************/
+/*#region MAIN*/
+.contenedorPrincipal {
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+
+/*#region SALUDO*/
 .saludo {
     background-color: var(--limed-spruce);
     margin: 0;
@@ -224,6 +231,7 @@ body {
     width: 100%;
 }
 
+/*#region DESCRIPCIÓN Y FOTO DE PRESENTACIÓN*/
 .saludo__fotoDePerfil {
     border: 6px solid var(--limed-spruce);
     border-radius: 5px;
@@ -261,7 +269,9 @@ body {
     line-height: 1.5;
     margin: 2rem 0 2rem 0;
 }
+/*#endregion DESCRIPCIÓN Y FOTO DE PRESENTACIÓN*/
 
+/*#region INFORMACIÓN CON GRID*/
 .saludo__informacionPersonal {
     box-sizing: border-box;
     border: 1px solid var(--manatee);
@@ -280,6 +290,7 @@ body {
 .saludo__informacionPersonal p:nth-child(even) {
     grid-column: 2 / span 2;
 }
+/*#endregion INFORMACIÓN CON GRID*/
 
 .saludo__descargarCV {
     background-color: var(--trout-primary);
@@ -293,8 +304,9 @@ body {
     outline: none;
     width: 10rem;
 }
+/*#endregion SALUDO*/
 
-/*********CONTENEDOR #2**********************/
+/*#region MI EXPERIENCIA*/
 .experiencia {
     background-color: var(--ebony-clay);
     line-height: 1.3;
@@ -304,7 +316,7 @@ body {
     overflow-x: hidden;
 }
 
-.experiencia::after {/*editar*/
+.experiencia::after {
     content: '';
     position: absolute;
     top: 8.5rem;
@@ -324,6 +336,7 @@ body {
     font-size: 2.3rem;
 }
 
+/*#region INFORMACIÓN PRINCIPAL*/
 .experiencia__contenedor {
     align-items: center;
     background-color: var(--ebony-clay);
@@ -387,8 +400,11 @@ body {
     line-height: 1.3;
     margin: 0 1rem;
 }
+/*#endregion INFORMACÓN PRINCIPAL*/
 
-/*********CONTENEDOR #3**********************/
+/*#endregion MI EXPERIENCIA*/
+
+/*#region MI APTITUDES*/
 .aptitudes {
     background-color: var(--limed-spruce);
     padding: 1rem 0.5rem;
@@ -427,13 +443,14 @@ body {
 .aptitudes__concepto {
     grid-column: 2 / 3;
 }
+/*#endregion MI APTITUDES*/
 
-/*********CONTENEDOR #4**********************/
+/*#region MIS SKILLS*/
 .skills {
     background-color: var(--ebony-clay);
     padding: 1rem;
 }
-
+/*#region ESTILOS DE SKILLS*/
 .skills__bordes {
     border: 1px solid var(--oriental-pink);
     border-radius: 5px;
@@ -456,7 +473,9 @@ body {
     display: flex;
     flex-flow: column nowrap;
 }
+/*#endregion ESTILOS DE SKILLS*/
 
+/*#region SKILLS*/
 .skills__HTML::after {
     bottom: 0.6rem;
     content: '80%';
@@ -564,14 +583,18 @@ body {
     position: absolute;
     width: 3rem;
 }
+/*#endregion SKILLS*/
 
-/*********CONTENEDOR #5**********************/
+/*#endregion MIS SKILLS*/
+
+/*#region CONTÁCTAME*/
 .contactame {
     background-color: var(--limed-spruce);
     height: 75rem;
     padding: 1rem;
 }
 
+/*#region CÓMO CONTÁCTARME*/
 .contactame__informacion {
     margin: 0 0 2rem 0;
     overflow-x: hidden;
@@ -602,7 +625,7 @@ body {
     font-size: 1.7rem;
 }
 
-.contactame__ubicacion {
+.contenedor-ubicacion {
     align-content: stretch;
     align-items: center;
     border: 1px solid var(--manatee);
@@ -614,7 +637,7 @@ body {
     padding: 1.5rem;
 }
 
-.contactame__email{
+.contenedor-email{
     align-content: stretch;
     align-items: center;
     border: 1px solid var(--manatee);
@@ -626,7 +649,7 @@ body {
     padding: 1.5rem;
 }
 
-.contactame__celular{
+.contenedor-celular{
     align-content: stretch;
     align-items: center;
     border: 1px solid var(--manatee);
@@ -651,7 +674,9 @@ body {
 .contactame__icono i{
     color: var(--manatee);
 }
+/*#endregion CÓMO CONTÁCTARME*/
 
+/*#region FORMULARIO DE CONTACTO*/
 .contactame__formulario{
     margin: 1rem 0;
 }
@@ -722,8 +747,13 @@ body {
     padding: 1rem; /*padding: 0.5rem; (cuando ponga el BOOTSTRAP)*/
     width: 10rem;
 }
+/*#endregion FORMULARIO DE CONTACTO*/
 
-/*********PIE DE PAGINA**********************/
+/*#endregion CONTÁCTAME*/
+
+/*#endregion MAIN*/
+
+/*#region PIE DE PÁGINA*/
 .pieDePagina {
     background-color: var(--ebony-clay);
     height: 25rem;
@@ -738,7 +768,6 @@ body {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
-    left: 20rem;
     margin: 1rem auto;
     position: relative;
     top: 0.5rem;
@@ -754,6 +783,7 @@ body {
     margin: 1rem;
 }
 
+/*#region COPYRIGHT E INFORMACIÓN DE CONTACTO*/
 .conoceme {
     font-size: 2rem;
     margin: 1rem;
@@ -776,8 +806,11 @@ body {
     font-size: 1rem;
     margin: 1rem;
 }
+/*#endregion COPYRIGHT E INFORMACIÓN DE CONTACTO*/
 
-/***********ESTILOS A LOS SKILLS********************************/
+/*#endregion PIE DE PÁGINA*/
+
+/*#region ESTILOS DE SKILLS*/
 .skills__grupoSkills {
     background-color: var(--ebony-clay);
     border-bottom: 1px solid var(--oriental-pink);
@@ -810,78 +843,25 @@ body {
     height: 1.5rem;
     width: 1.5rem;
 }
+/*#endregion ESTILOS DE SKILLS*/
 
-.moverIzq-Der {
-    transform-origin: 0 0;
-    transform: translate(50rem);
+/*#region POSICIONAR LOS ELEMENTOS QUE SE VAN A ANIMAR*/
+.izquierda {
+    transform: translateX(-20rem);
+    opacity: 0;
+}
+
+.derecha {
+    opacity: 0;
+    transform: translateX(20rem);
+}
+/*#endregion POSICIONAR LOS ELEMENTOS QUE SE VAN A ANIMAR*/
+
+.moverAlCentro { /*CLASE QUE DA LA ANIMACIÓN PARA QUE APAREZCA EN PANTALLA.*/
+    opacity: 1;
+    transform: translateX(0);
     transition: transform 5s;
 }
-
-.moverDer-Izq {
-    transform-origin: 0 0;
-    transform: translate(-50rem);
-    transition: transform 5s;
-}
-
-
-/*ANIMACIONES*/
-.hortomallas {
-    left: 50rem;
-}
-
-.gdl-circuits {
-    right: 50rem;
-}
-
-.uteg {
-    left: 50rem;
-}
-
-.cetis {
-    right: 50rem;
-}
-
-.contactame__ubicacion {
-    position: relative;
-    right: 50rem;
-}
-
-.contactame__email {
-    position: relative;
-    left: 50rem;
-}
-
-.contactame__celular{
-    position: relative;
-    right: 50rem;
-}
-
-.pieDePagina__bordes {
-    left: 50rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

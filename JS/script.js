@@ -1,5 +1,5 @@
+//#region ANIMACIÓN DEL MENÚ.
 desplazarMenu();
-
 
 function desplazarMenu() {
     let listaNavegacion = document.querySelector(".Container__listaNavegacionMobile");
@@ -40,99 +40,54 @@ function desplazarMenu() {
         }
     });
 }
+//#endregion ANIMACIÓN DEL MENÚ.
 
-/* CARGA FORZADA.*/
+//#region BOTÓN CARGA FORZADA.
 let btnCarga = document.querySelector('.reloadforce');
 
 btnCarga.addEventListener('click', ()=>{
     location.reload();
 });
+//#endregion
 
-/***************/
+//#region API INTERSECTION OBSERVE.
+//#region OBTENER POSICIÓN DE LOS ELEMENTOS.
+let moverHortomallas = document.querySelector('.contenedor-hortomallas');
+let moverGdlCircuits = document.querySelector('.contenedor-gdlCircuits');
+let moverUteg = document.querySelector('.contenedor-uteg');
+let moverCetis = document.querySelector('.contenedor-cetis');
+let moverUbicacion = document.querySelector('.contenedor-ubicacion');
+let moverEmail = document.querySelector('.contenedor-email');
+let moverCelular = document.querySelector('.contenedor-celular');
+let moverPieDePagina = document.querySelector('.pieDePagina__bordes');
+//#endregion region OBTENER POSICIÓN DE LOS ELEMENTOS.
 
-
-/* PROBANDOLA API PARA LA ANIMACION.*/
-let elementosALaDerecha = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.intersectionRatio > 0) {
-            entry.target.classList.add('moverDer-Izq');
-            elementosALaDerecha.unobserve(entry.target);
-        }
-    });
+const observador = new IntersectionObserver(moverImagen, () =>{
+    root: null;
+    rootMargin: "0px";
+    threshold: 0.25;
 });
-elementosALaDerecha.observe(document.querySelector('.hortomallas'));
-elementosALaDerecha.observe(document.querySelector('.uteg'));
-elementosALaDerecha.observe(document.querySelector('.contactame__email'));
-elementosALaDerecha.observe(document.querySelector('.pieDePagina__bordes'));
 
-let elementosALaIzquierda = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.intersectionRatio > 0) {
-            entry.target.classList.add('moverIzq-Der');
-            elementosALaIzquierda.unobserve(entry.target);
-        }
+function moverImagen(entradas, observador) {
+    entradas.forEach(function(entrada) {
+        
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add('moverAlCentro');
+            console.log('La imagen esta en pantalla');
+        } 
+        /* else {
+            entrada.target.classList.remove('moverAlCentro');
+            console.log('La imagen NO esta en pantalla');
+        } */
+        
     });
-});
-elementosALaIzquierda.observe(document.querySelector('.gdl-circuits'));
-elementosALaIzquierda.observe(document.querySelector('.cetis'));
-elementosALaIzquierda.observe(document.querySelector('.contactame__ubicacion'));
-elementosALaIzquierda.observe(document.querySelector('.contactame__celular'));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* AGREGAR ANIMACION CSS (PRUEBA) 
-CREAR NUEVA CLASE Y AGREGARSELA CADA QUE SE VEA EN EL VIEWPORT {
-    .experiencia__contenedor:nth-child(odd) {
-        left: -20rem;
-    }
-
-    .experiencia__contenedor:nth-child(odd) {
-        transform-origin: 0 0;
-        transform: translateX(20rem);
-        transition: transform 6s;
-    }
-}
-
-CREAR NUEVA CLASE Y AGREGARSELA CADA QUE SE VEA EN EL VIEWPORT {
-    .experiencia__contenedor:nth-child(even) {
-    }
-
-    .experiencia__contenedor:nth-child(even) {
-        transform-origin: 0 0;
-        transform: translateX(-20rem);
-        transition: transform 6s;
-    }
-}
-*/
+} 
+observador.observe(moverHortomallas);
+observador.observe(moverGdlCircuits);
+observador.observe(moverUteg);
+observador.observe(moverCetis);
+observador.observe(moverUbicacion);
+observador.observe(moverEmail);
+observador.observe(moverCelular);
+observador.observe(moverPieDePagina);
+//#endregion API INTERSECTION OBSERVE.
