@@ -52,14 +52,20 @@ btnCarga.addEventListener('click', ()=>{
 
 //#region API INTERSECTION OBSERVE.
 //#region OBTENER POSICIÓN DE LOS ELEMENTOS.
-let moverHortomallas = document.querySelector('.contenedor-hortomallas');
-let moverGdlCircuits = document.querySelector('.contenedor-gdlCircuits');
-let moverUteg = document.querySelector('.contenedor-uteg');
-let moverCetis = document.querySelector('.contenedor-cetis');
+let moverHortomallas = document.querySelector('.moverHORTOMALLAS');
+let moverGdlCircuits = document.querySelector('.moverGDLCIRCUITS');
+let moverUteg = document.querySelector('.moverUTEG');
+let moverCetis = document.querySelector('.moverCETIS');
 let moverUbicacion = document.querySelector('.contenedor-ubicacion');
 let moverEmail = document.querySelector('.contenedor-email');
 let moverCelular = document.querySelector('.contenedor-celular');
 let moverPieDePagina = document.querySelector('.pieDePagina__bordes');
+
+let moverHortomallasFecha = document.querySelector('.moverHORTOMALLASFecha');
+let moverGdlCircuitsFecha = document.querySelector('.moverGDLCIRCUITSFecha');
+let moverUtegFecha = document.querySelector('.moverUTEGFecha');
+let moverCetisFecha = document.querySelector('.moverCETISFecha');
+
 //#endregion region OBTENER POSICIÓN DE LOS ELEMENTOS.
 
 const observador = new IntersectionObserver(moverImagen, () =>{
@@ -90,4 +96,9 @@ observador.observe(moverUbicacion);
 observador.observe(moverEmail);
 observador.observe(moverCelular);
 observador.observe(moverPieDePagina);
+
+observador.observe(moverHortomallasFecha);
+observador.observe(moverGdlCircuitsFecha);
+observador.observe(moverUtegFecha);
+observador.observe(moverCetisFecha);
 //#endregion API INTERSECTION OBSERVE.
