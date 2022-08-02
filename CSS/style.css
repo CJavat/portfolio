@@ -1144,11 +1144,24 @@ body {
         padding: 0;
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
+    .skills__primeraMitad {
+        width: 12rem;
+        padding: 1rem;
+    }
+    .skills__segundaMitad {
+        width: 12rem;
+        padding: 1rem;
+    }
+    .skills__terceraMitad {
+        width: 12rem;
+        padding: 1rem;
+    }
     .skills__cuartaMitad {
-        margin-right: 1rem;
+        width: 12rem;
+        padding: 1rem;
     }
     /*#endregion MIS SKILLS*/
 
