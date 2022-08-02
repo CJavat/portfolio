@@ -7,8 +7,8 @@ function desplazarMenu() {
     let primeraBarra = document.querySelector(".bar:first-child");
     let ultimaBarra = document.querySelector(".bar:last-child");
     let bandera = false;
-    
     menuMobile.addEventListener("click", ()=>{
+        console.log(bandera)
         if(bandera === false) {
             bandera = true;
             listaNavegacion.style.transition = "transform .5S ease-in-out, visibility .5s ease-in-out"
@@ -23,7 +23,7 @@ function desplazarMenu() {
             ultimaBarra.style.transform = "rotate(-90deg) translateY(7px)";
             ultimaBarra.style.transition = "transform 2s";
         }
-        else {s
+        else {
             bandera = false;
             
             listaNavegacion.className = "Container__listaNavegacionMobile";
