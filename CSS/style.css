@@ -33,7 +33,7 @@ body {
 .contenedor-web {
     width: 100%;
     height: 100%;
-    padding-top: 10%;
+    padding-top: 5.52rem;
     padding-bottom: 0%;
     padding-left: 10%;
     padding-right: 10%;
@@ -119,7 +119,7 @@ body {
     transform-origin: 0 0;
     transition: transform 0S ease-in-out, visibility 0s ease-in-out;
     visibility: hidden;
-    width: 100vw;
+    width: 80vw;
     z-index: 999;
 }
 
@@ -140,7 +140,7 @@ body {
     transform: translate(6) scaleY(1);
     transform-origin: 0 0;
     visibility: visible;
-    width: 100vw;
+    width: 80vw;
     z-index: 999;
 }
 
@@ -873,7 +873,6 @@ body {
     portrait ---> orientacion del teléfono en vertical.
     landscape --> orientacion del teléfono en horizontal.
 */
-
 /*#region MOVILES PARA PANTALLAS CON MENOS DE 465PX*/
 @media only screen and (max-width: 465px) and (orientation: portrait) {
     .contenedor-web {
@@ -883,16 +882,19 @@ body {
     .navegacion {
         width: 100vw;
     }
+    .Container__listaNavegacionMobile {
+        width: 100vw;
+    }
+    
+    .Container__listaNavegacionMobileActived {
+        width: 100vw;
+    }
     .presentacion {
         padding-top: 5.5rem;
     }
 }
 /*#endregion MOVILES PARA PANTALLAS CON MENOS DE 465PX*/
 /*#region MOVILES PARA PANTALLAS CON MENOS DE 465PX Y HORIZONTAL*/
-/*ATENCIÓN:
-    ESTE SE PUEDE USAR PARA LA VERSION DESKTOP.
-*/
-
 @media only screen and (max-height: 465px) and (orientation: landscape) {
     .contenedor-web {
         width: 100%;
@@ -1237,30 +1239,359 @@ body {
 /*#endregion MOVILES PARA PANTALLAS CON MENOS DE 465PX Y HORIZONTAL*/
 
 
+/*#region Version Desktop*/
+@media only screen and (min-width: 838px) {
+    .contenedor-web {
+        width: 100vw;
+        padding: 0 20vw;
+        background-color: red;
+    }
+    /*#region CABECERA*/
+    
+    /*#region BARRA DE NAVEGACIÓN*/
+    .navegacion {
+        height: 6rem;
+        width: 60vw;
+    }
+
+    .logo{
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .Container__listaNavegacionDesktop { /* EDITAR MENU EN VERSION ESCRITORIO. */
+        display: inline-block;
+    }
+
+    .Container__listaNavegacionDesktop a:hover{/*CAMBIAR A DESKTOP*/
+        color: var(--regent-gray);
+    }
+
+    .Container__listaNavegacionDesktop button:hover{/*CAMBIAR A DESKTOP*/
+        color: var(--regent-gray);
+    }
+
+    .bar {
+        display: none;
+    }
+
+    .Container__listaNavegacionMobile {
+        display: none;
+    }
+
+    .Container__listaNavegacionMobileActived {
+        display: none;
+    }
+    /*#endregion BARRA DE NAVEGACION*/
+    /*#region PRESENTACIÓN*/
+    .presentacion {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 6rem;
+    }
+
+    .contenido-presentacion {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-start;
+    }
+    
+    .presentacion__boton {
+        margin: auto;
+    }
+    /*#endregion PRESENTACIÓN*/
+    /*#endregion CABECERA*/
+
+    /*#region MAIN*/
+    /*#region SALUDO*/
+    /*#region DESCRIPCIÓN Y FOTO DE PRESENTACIÓN*/
+    .contenedor-saludoPrincipal {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .saludo__fotoDePerfil {
+        height: 25%;
+        width: 25%;
+    }
+
+    .contenido-saludo {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .saludo__descripcion {
+        margin: 0 0 0.5rem 0;
+    }
+    /*#endregion DESCRIPCIÓN Y FOTO DE PRESENTACIÓN*/
+
+    /*#region INFORMACIÓN CON GRID*/
+    .saludo__informacionPersonal {
+        gap: 0;
+        grid-auto-rows: 2rem;
+        grid-template-columns: repeat(2, minmax(1rem, 1fr));
+        align-items: center;
+        justify-items: center;
+    }
+    /*#endregion INFORMACIÓN CON GRID*/
+    /*#endregion SALUDO*/
+
+    /*#region MI EXPERIENCIA*/
+    .experiencia {
+        overflow: hidden;
+    }
+
+    .experiencia::after {
+        z-index: 9999999;
+        height: 70.45%;
+        top: 7.8rem;
+    } 
+
+    .experiencia__contenedor::before {
+        top: 2.5rem;
+    }
+
+    .experiencia__contenedor {
+        border: none;
+        flex-flow: row-reverse nowrap;
+        height: auto;
+        margin: .5rem 0;
+    }
+
+    .experiencia__fechaImpar {
+        align-self: flex-start;
+        width: 47%;
+        text-align: left;
+    }
+
+    .experiencia__fechaPar {
+        width: 48.5%;
+        text-align: right;
+    }
+
+    .contenedor__informacionExperienciaImpar:before {
+        background-color: var(--ebony-clay);
+        border-right: 1px solid var(--oriental-pink);
+        border-top: 1px solid var(--oriental-pink);
+        content: '';
+        height: 0.5rem;
+        left: 100%;
+        margin: -0.33rem 0 0 -0.259rem;
+        position: absolute;
+        top: 4%;
+        transform: rotate(44deg);
+        width: 0.5rem;
+
+    }
+
+    .contenedor__informacionExperienciaPar:before {
+        background-color: var(--ebony-clay);
+        border-right: 1px solid var(--oriental-pink);
+        border-top: 1px solid var(--oriental-pink);
+        content: '';
+        height: 0.5rem;
+        right: 99%;
+        margin: -0.33rem 0 0 -0.259rem;
+        position: absolute;
+        top: 4%;
+        transform: rotate(224deg);
+        width: 0.5rem;
+        z-index: 2;
+    }
+
+    .contenedor__informacionExperienciaImpar { /*cambios*/
+        border: 1px solid var(--oriental-pink);
+        border-radius: 5px;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 47.5%;
+        margin-right: 1rem;
+    }
+
+    .contenedor__informacionExperienciaPar { /*cambios*/
+        border: 1px solid var(--oriental-pink);
+        border-radius: 5px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 47.5%;
+    }
+
+    .contenedor-gdlCircuits {
+        height: 22rem;
+        display: flex;
+        flex-flow: row-reverse wrap;
+        justify-content: flex-end;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+
+    .contenedor-uteg {
+        height: auto;
+    }
+    
+    .contenedor-cetis {
+        height: 22rem;
+        display: flex;
+        flex-flow: row-reverse wrap;
+        justify-content: flex-end;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+
+    .experiencia__cetis {
+        margin-top: 1rem;
+    }
+
+    .experiencia__descripcion {
+        margin: 0 0.5rem;
+    }
+    /*#endregion MI EXPERIENCIA*/
+
+    /*#region MI APTITUDES*/
+    .aptitudes {
+        background-color: var(--limed-spruce);
+        padding: 1rem 0.5rem;
+    }
+
+    .aptitudes__lista {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        margin: auto;
+    }
+    
+    .aptitudes__elementos {
+        display: inline-block;
+    }
+    .aptitudes__elementos p {
+        display: inline;
+    }
+
+    .aptitudes__titulo {
+        color: var(--manatee);
+        font-weight: bold;
+        opacity: 0.8;
+    }
+
+    .aptitudes__cruz {
+        color: var(--manatee);
+        grid-column: 1 / 2;
+    }
+
+    .aptitudes__concepto {
+        grid-column: 2 / 3;
+    }
+    /*#endregion MI APTITUDES*/
+
+    /*#region MIS SKILLS*/
+    .listaDeSkills {
+        padding: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+
+    .skills__primeraMitad {
+        width: 12rem;
+        padding: 1rem;
+    }
+    .skills__segundaMitad {
+        width: 12rem;
+        padding: 1rem;
+    }
+    .skills__terceraMitad {
+        width: 12rem;
+        padding: 1rem;
+    }
+    .skills__cuartaMitad {
+        width: 12rem;
+        padding: 1rem;
+    }
+    /*#endregion MIS SKILLS*/
+
+    /*#region CONTÁCTAME*/
+    .contactame {
+        height: 32.5rem;
+        padding: 0 1rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    /*#region CÓMO CONTÁCTARME*/
+    .contactame__informacion {
+        width: 25rem;
+    }
+
+    .contenedor-ubicacion {
+        margin: .5rem 0;
+    }
+
+    .contenedor-email{
+        margin: .5rem 0;
+    }
+
+    .contenedor-celular{
+        margin: 0.5rem 0;
+    }/*#endregion CÓMO CONTÁCTARME*/
+
+    /*#region FORMULARIO DE CONTACTO*/
+    .contactame__formulario{
+        margin: 0;
+    }
+
+    .contactame__form {
+        height: 32rem;
+        width: 20rem;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-end
+    }
+    
+    .form__nombre {
+        margin: 0.1rem 0;
+    }
+
+    .form__email {
+        margin: 0.1rem 0;
+    }
+
+    .form__asunto {
+        margin: 0.1rem 0;
+    }
+
+    .form__mensaje{
+        margin: 0.1rem 0;
+        height: 10rem;
+    }
+
+    .form__enviar-mensaje {
+        margin: 0.5rem 0;
+    }
+    /*#endregion FORMULARIO DE CONTACTO*/
+
+    /*#endregion CONTÁCTAME*/
+    /*#endregion MAIN*/
+}
+/*#endregion Version Desktop*/
+
 
 
 
 
 /*#endregion MEDIA QUERIES*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .reloadforce {
     background-color: black;
