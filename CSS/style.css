@@ -996,59 +996,32 @@ body {
         overflow: hidden;
     }
 
-    .experiencia::after { /* -linea- */
+    .experiencia::after {
         z-index: 9999999;
         height: 70.45%;
+        top: 7.8rem;
     } 
 
-    .contenedor__informacionExperienciaImpar { /*cambios*/
-        border: 1px solid var(--oriental-pink);
-        border-radius: 5px;
-        position: absolute;
-        top: -2.5rem;
-        left: 0;
-        width: 47.5%;
-    }
-    .contenedor__informacionExperienciaPar { /*cambios*/
-        border: 1px solid var(--oriental-pink);
-        border-radius: 5px;
-        position: absolute;
-        top: -2.5rem;
-        right: 0;
-        width: 47.5%;
+    .experiencia__contenedor::before {
+        top: 2.5rem;
     }
 
-    /*#region INFORMACIÓN PRINCIPAL*/
     .experiencia__contenedor {
         border: none;
-        align-items: center;
-        background-color: var(--ebony-clay);
-        display: flex;
-        flex-flow: column nowrap;
-        height: 25rem;
-        justify-content: space-evenly;
-        margin: 3.5rem 0;
-        position: relative;
-        width: 100%;
-        z-index: 3;
+        flex-flow: row-reverse nowrap;
+        height: auto;
+        margin: .5rem 0;
     }
 
-    .contenedor-gdlCircuits {
-        height: 22rem;
+    .experiencia__fechaImpar {
+        align-self: flex-start;
+        width: 47%;
+        text-align: left;
     }
 
-    .contenedor-uteg {
-        height: 22rem;
-    }
-    
-    .contenedor-cetis {
-        height: 22rem;
-        margin: 3.5rem 0 0.5rem 0;
-    }
-
-    .experiencia__fecha::before {
-        border: none;
-        background-color: transparent;
+    .experiencia__fechaPar {
+        width: 48.5%;
+        text-align: right;
     }
 
     .contenedor__informacionExperienciaImpar:before {
@@ -1063,7 +1036,7 @@ body {
         top: 4%;
         transform: rotate(44deg);
         width: 0.5rem;
-        z-index: 2;
+
     }
 
     .contenedor__informacionExperienciaPar:before {
@@ -1081,22 +1054,54 @@ body {
         z-index: 2;
     }
 
-    .experiencia__fechaImpar {
-        position: absolute;
-        top: -2.5rem;
-        right: 28%;
+    .contenedor__informacionExperienciaImpar { /*cambios*/
+        border: 1px solid var(--oriental-pink);
+        border-radius: 5px;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 47.5%;
+        margin-right: 1rem;
     }
 
-    .experiencia__fechaPar {
+    .contenedor__informacionExperienciaPar { /*cambios*/
+        border: 1px solid var(--oriental-pink);
+        border-radius: 5px;
         position: absolute;
-        top: -2.5rem;
-        left: 28%;
+        top: 0;
+        right: 0;
+        width: 47.5%;
+    }
+
+    .contenedor-gdlCircuits {
+        height: 22rem;
+        display: flex;
+        flex-flow: row-reverse wrap;
+        justify-content: flex-end;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+
+    .contenedor-uteg {
+        height: auto;
+    }
+    
+    .contenedor-cetis {
+        height: 22rem;
+        display: flex;
+        flex-flow: row-reverse wrap;
+        justify-content: flex-end;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+
+    .experiencia__cetis {
+        margin-top: 1rem;
     }
 
     .experiencia__descripcion {
         margin: 0 0.5rem;
     }
-    /*#endregion INFORMACÓN PRINCIPAL*/
     /*#endregion MI EXPERIENCIA*/
 
     /*#region MI APTITUDES*/
