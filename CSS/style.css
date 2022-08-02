@@ -889,6 +889,9 @@ body {
 }
 /*#endregion MOVILES PARA PANTALLAS CON MENOS DE 465PX*/
 /*#region MOVILES PARA PANTALLAS CON MENOS DE 465PX Y HORIZONTAL*/
+/*ATENCIÓN:
+    ESTE SE PUEDE USAR PARA LA VERSION DESKTOP.
+*/
 @media only screen and (max-height: 465px) and (orientation: landscape) {
     .contenedor-web {
         width: 100%;
@@ -931,32 +934,20 @@ body {
     /*#endregion BARRA DE NAVEGACION*/
     /*#region PRESENTACIÓN*/
     .presentacion {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
-        grid-template-rows: repeat(3, 6.66666666667rem);
-        justify-items: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
         align-items: center;
     }
 
-    .presentacion__imagen {
-        grid-column: 1 / span 4;
-        grid-row: 1 / span 3;
-    }
-
     .contenido-presentacion {
-        grid-column: 5 / span 6;
-        grid-row: 1 / 3;
-        justify-self: start;
-        
         display: flex;
-        flex-flow: column nowrap;
+        flex-flow: column wrap;
+        align-items: flex-start;
     }
     
     .presentacion__boton {
-        grid-column: 5 / span 6;
-        grid-row: 3/ 4;
-        align-self: end;
-        justify-self: end;
+        margin: auto;
     }
     /*#endregion PRESENTACIÓN*/
     /*#endregion CABECERA*/
@@ -964,30 +955,28 @@ body {
     /*#region MAIN*/
 
     /*#region SALUDO*/
-    .saludo {
-        background-color: var(--limed-spruce);
-        margin: 0;
-        padding: 1rem;
-        width: 100%;
-        position: relative;
+    /*#region DESCRIPCIÓN Y FOTO DE PRESENTACIÓN*/
+    .contenedor-saludoPrincipal {
         display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 5rem;
     }
 
-    /*#region DESCRIPCIÓN Y FOTO DE PRESENTACIÓN*/
     .saludo__fotoDePerfil {
         height: 25%;
         margin: 1rem 0;
         width: 25%;
-        flex-grow: 1;
     }
 
     .contenido-saludo {
-        flex-grow: 1;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
     }
 
-    /* .saludo__titulo {
-        
-    } */
+    
 
     
 
@@ -1133,6 +1122,8 @@ body {
 
     /*#endregion MI EXPERIENCIA*/
 
+
+
     /*#region MI APTITUDES*/
     .aptitudes {
         background-color: var(--limed-spruce);
@@ -1173,6 +1164,8 @@ body {
         grid-column: 2 / 3;
     }
     /*#endregion MI APTITUDES*/
+
+
 
     /*#region MIS SKILLS*/
     .skills {
@@ -1314,6 +1307,9 @@ body {
     }
     /*#endregion SKILLS*/
     /*#endregion MIS SKILLS*/
+
+
+
 
     /*#region CONTÁCTAME*/
     .contactame {
@@ -1477,9 +1473,7 @@ body {
     /*#endregion FORMULARIO DE CONTACTO*/
 
     /*#endregion CONTÁCTAME*/
-
     /*#endregion MAIN*/
-
 }
 /*#endregion MOVILES PARA PANTALLAS CON MENOS DE 465PX Y HORIZONTAL*/
 
