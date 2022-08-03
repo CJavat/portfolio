@@ -29,7 +29,6 @@ body {
     overflow-x: hidden;
 }
 /*#endregion VIEWPORT*/
-
 .contenedor-web {
     width: 100%;
     height: 100%;
@@ -866,13 +865,8 @@ body {
     transition: transform 2s;
 }
 
-
 /*#region MEDIA QUERIES*/
-/*
-    orientation: landscape - portrait;
-    portrait ---> orientacion del teléfono en vertical.
-    landscape --> orientacion del teléfono en horizontal.
-*/
+
 /*#region MOVILES PARA PANTALLAS CON MENOS DE 465PX*/
 @media only screen and (max-width: 465px) and (orientation: portrait) {
     .contenedor-web {
@@ -1237,21 +1231,60 @@ body {
     /*#endregion MAIN*/
 }
 /*#endregion MOVILES PARA PANTALLAS CON MENOS DE 465PX Y HORIZONTAL*/
-
-
 /*#region Version Desktop*/
 @media only screen and (min-width: 838px) {
+    /*#region MODIFICAR EL SCROLLBAR*/
+    /*nos encargaremos de definir la altura y la anchura del componente Scroll. 
+    Y si lo deseas, lo puedes ocultar sin afectar su funcionamiento.*/
+    body::-webkit-scrollbar {
+        width: 1rem; /*Tamaño del scroll en vertical*/
+        /* height: 50rem; */ /*Tamaño del scroll en horizontal*/
+        /* display: none; */ /*Ocultar el scroll*/
+    }
+
+    /* podremos modificar los bordes, fondo y sombras el componente thumb, lo mejor de 
+        todo es que podemos utilizar las pseudo clases active y hover sobre este componente*/
+    body::-webkit-scrollbar-thumb {
+        background-color: var(--matterhorn);
+        border-radius: 5px;
+    }
+
+    body::-webkit-scrollbar-thumb:hover  {
+        background-color: var(--oriental-pink);
+        box-shadow: 0 0 2px 1px rgba(0,0,0,0.2);
+    }
+
+    body::-webkit-scrollbar-thumb:active {
+        background-color: #999;
+    }
+
+    /* es la misma historia que con ::-webkit-scrollbar-thumb respecto a los estilos y pseudo
+    clases, pero aplicados al track.*/
+    body::-webkit-scrollbar-track {
+        background-color: var(--ebony-clay);
+        border-radius: 5px;
+    }
+
+    body::-webkit-scrollbar-track:hover, body::-webkit-scrollbar-track:hover {
+        background-color: var(--limed-spruce);
+    }
+
+    /*#endregion MODIFICAR EL SCROLLBAR*/
+
     .contenedor-web {
         width: 100vw;
         padding: 0 20vw;
-        background-color: red;
+        background-color: var(--ebony-clay);
     }
     /*#region CABECERA*/
-    
     /*#region BARRA DE NAVEGACIÓN*/
     .navegacion {
-        height: 6rem;
+        height: auto;
         width: 60vw;
+        border-left: 1px solid var(--primary-black);
+        border-right: 1px solid var(--primary-black);
+        box-shadow: 1px -1 15px var(--primary-black), -1.5px -1 15px var(--primary-black) ;
+
     }
 
     .logo{
@@ -1259,16 +1292,51 @@ body {
         width: 5rem;
     }
 
+    .menuMobile {
+        display: none;
+    }
+
     .Container__listaNavegacionDesktop { /* EDITAR MENU EN VERSION ESCRITORIO. */
-        display: inline-block;
+        font-size: 1.5rem;
+        width: auto;
+        height: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        align-content: space-around;
+        justify-content: center;
+        align-items: center;
     }
 
     .Container__listaNavegacionDesktop a:hover{/*CAMBIAR A DESKTOP*/
-        color: var(--regent-gray);
+        color: var(--oriental-pink);
     }
 
     .Container__listaNavegacionDesktop button:hover{/*CAMBIAR A DESKTOP*/
         color: var(--regent-gray);
+    }
+
+    .listaNavegacionDesktop {
+        width: auto;
+        display: flex;
+        flex-flow: row wrap;
+        align-content: space-between;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .elementolistaDesktop {
+        margin: 1rem;
+    }
+
+    .contratameDesktop {
+        margin: 0 1rem;
+        padding: 1rem;
+        font-size: 1.2rem;
+        outline: none;
+        border: 1px solid var(--oriental-pink);
+        border-radius: 5px;
+        background-color: transparent;
+        color: var(--oriental-pink);
     }
 
     .bar {
@@ -1285,11 +1353,12 @@ body {
     /*#endregion BARRA DE NAVEGACION*/
     /*#region PRESENTACIÓN*/
     .presentacion {
-        display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        padding-top: 6rem;
+        padding-top: 10.9rem;
+        border-left: 1px solid var(--primary-black);
+        border-right: 1px solid var(--primary-black);
     }
 
     .contenido-presentacion {
@@ -1299,12 +1368,16 @@ body {
     }
     
     .presentacion__boton {
-        margin: auto;
+        margin: 0;
     }
     /*#endregion PRESENTACIÓN*/
     /*#endregion CABECERA*/
 
     /*#region MAIN*/
+    .contenedorPrincipal {
+        border-left: 1px solid var(--primary-black);
+        border-right: 1px solid var(--primary-black);
+    }
     /*#region SALUDO*/
     /*#region DESCRIPCIÓN Y FOTO DE PRESENTACIÓN*/
     .contenedor-saludoPrincipal {
@@ -1330,7 +1403,6 @@ body {
         margin: 0 0 0.5rem 0;
     }
     /*#endregion DESCRIPCIÓN Y FOTO DE PRESENTACIÓN*/
-
     /*#region INFORMACIÓN CON GRID*/
     .saludo__informacionPersonal {
         gap: 0;
@@ -1341,7 +1413,6 @@ body {
     }
     /*#endregion INFORMACIÓN CON GRID*/
     /*#endregion SALUDO*/
-
     /*#region MI EXPERIENCIA*/
     .experiencia {
         overflow: hidden;
@@ -1363,6 +1434,12 @@ body {
         height: auto;
         margin: .5rem 0;
     }
+    .experiencia__contenedor:nth-child(even) {
+        border: none;
+        flex-flow: row nowrap;
+        height: auto;
+        margin: .5rem 0;
+    }
 
     .experiencia__fechaImpar {
         align-self: flex-start;
@@ -1371,7 +1448,8 @@ body {
     }
 
     .experiencia__fechaPar {
-        width: 48.5%;
+        align-self: flex-start;
+        width: 47%;
         text-align: right;
     }
 
@@ -1418,57 +1496,34 @@ body {
     .contenedor__informacionExperienciaPar { /*cambios*/
         border: 1px solid var(--oriental-pink);
         border-radius: 5px;
-        position: absolute;
+        position: relative;
         top: 0;
-        right: 0;
+        left: 0;
         width: 47.5%;
-    }
-
-    .contenedor-gdlCircuits {
-        height: 22rem;
-        display: flex;
-        flex-flow: row-reverse wrap;
-        justify-content: flex-end;
-        align-items: flex-start;
-        margin-bottom: 1rem;
-    }
-
-    .contenedor-uteg {
-        height: auto;
-    }
-    
-    .contenedor-cetis {
-        height: 22rem;
-        display: flex;
-        flex-flow: row-reverse wrap;
-        justify-content: flex-end;
-        align-items: flex-start;
-        margin-bottom: 1rem;
-    }
-
-    .experiencia__cetis {
-        margin-top: 1rem;
+        margin-left: 1rem;
     }
 
     .experiencia__descripcion {
         margin: 0 0.5rem;
     }
-    /*#endregion MI EXPERIENCIA*/
 
+    .experiencia__cetis {
+        margin-top: 1rem;
+    }
+    /*#endregion MI EXPERIENCIA*/
     /*#region MI APTITUDES*/
     .aptitudes {
         background-color: var(--limed-spruce);
         padding: 1rem 0.5rem;
+        font-size: 2rem;
     }
 
     .aptitudes__lista {
         display: flex;
         gap: 0.5rem;
-        flex-wrap: wrap;
-        flex-direction: row;
+        flex-flow: column nowrap;
         justify-content: space-evenly;
         align-items: center;
-        align-content: center;
         margin: auto;
     }
     
@@ -1480,21 +1535,9 @@ body {
     }
 
     .aptitudes__titulo {
-        color: var(--manatee);
-        font-weight: bold;
-        opacity: 0.8;
-    }
-
-    .aptitudes__cruz {
-        color: var(--manatee);
-        grid-column: 1 / 2;
-    }
-
-    .aptitudes__concepto {
-        grid-column: 2 / 3;
+        font-size: 2rem;
     }
     /*#endregion MI APTITUDES*/
-
     /*#region MIS SKILLS*/
     .listaDeSkills {
         padding: 0;
@@ -1520,16 +1563,15 @@ body {
         padding: 1rem;
     }
     /*#endregion MIS SKILLS*/
-
     /*#region CONTÁCTAME*/
     .contactame {
         height: 32.5rem;
         padding: 0 1rem;
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        align-content: flex-start;
+        justify-content: space-evenly;
     }
-
     /*#region CÓMO CONTÁCTARME*/
     .contactame__informacion {
         width: 25rem;
@@ -1581,19 +1623,21 @@ body {
         margin: 0.5rem 0;
     }
     /*#endregion FORMULARIO DE CONTACTO*/
-
     /*#endregion CONTÁCTAME*/
     /*#endregion MAIN*/
+
+    /*#region footer*/
+    .pieDePagina {
+        border-left: 1px solid var(--primary-black);
+        border-right: 1px solid var(--primary-black);
+    }
+    /*#endregion footer*/
 }
 /*#endregion Version Desktop*/
 
-
-
-
-
 /*#endregion MEDIA QUERIES*/
 
-.reloadforce {
+/* .reloadforce {
     background-color: black;
     border: 1px solid black;
     border-radius: 5px;
@@ -1604,4 +1648,4 @@ body {
     position: fixed;
     top: 17%;
     z-index: 999999999;
-}
+} */

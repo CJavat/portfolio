@@ -102,3 +102,4 @@ observador.observe(moverGdlCircuitsFecha);
 observador.observe(moverUtegFecha);
 observador.observe(moverCetisFecha);
 //#endregion API INTERSECTION OBSERVE.
+
