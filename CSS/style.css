@@ -865,6 +865,10 @@ body {
     transition: transform 2s;
 }
 
+.seccionSeleccionada li{
+    color: var(--matterhorn)
+}
+
 /*#region MEDIA QUERIES*/
 
 /*#region MOVILES PARA PANTALLAS CON MENOS DE 465PX*/

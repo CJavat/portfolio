@@ -79,12 +79,7 @@ function moverImagen(entradas, observador) {
         
         if (entrada.isIntersecting) {
             entrada.target.classList.add('moverAlCentro');
-            console.log('La imagen esta en pantalla');
-        } 
-        /* else {
-            entrada.target.classList.remove('moverAlCentro');
-            console.log('La imagen NO esta en pantalla');
-        } */
+        }
         
     });
 } 
@@ -103,3 +98,43 @@ observador.observe(moverUtegFecha);
 observador.observe(moverCetisFecha);
 //#endregion API INTERSECTION OBSERVE.
 
+
+let quienSoy_Desktop = document.querySelector('.saludo');
+let quienSoy_Mobile = document.querySelector('.saludo');
+
+let experiencia_Desktop = document.querySelector('.experiencia');
+let experiencia_Mobile = document.querySelector('.experiencia');
+
+let aptitudes_Desktop = document.querySelector('.aptitudes');
+let aptitudes_Mobile = document.querySelector('.aptitudes');
+
+let skills_Desktop = document.querySelector('.skills');
+let skills_Mobile = document.querySelector('.skills');
+
+let contactame_Desktop = document.querySelector('.contactame');
+let contactame_Mobile = document.querySelector('.contactame');
+
+const observar_seleccionarSeccion = new IntersectionObserver(seleccionarSeccion, ()=>{
+    root: null;
+    rootMargin: "0";
+    threshold: .25;
+});
+
+function seleccionarSeccion(entradas, observador) {
+    entradas.forEach(function(entrada){
+        if(entradas.isIntersecting ==true) {
+            //entrada.target.classList.add('seccionSeleccionada');
+            console.log("ENTRO: "+ entrada.target.id);
+        }
+        else {
+            //entrada.target.classList.remove('seccionSeleccionada');
+            console.log("SALIO:" + entrada.target.id);
+        }
+    });
+}
+
+observar_seleccionarSeccion.observe(quienSoy_Desktop);
+observar_seleccionarSeccion.observe(experiencia_Desktop);
+observar_seleccionarSeccion.observe(aptitudes_Desktop);
+observar_seleccionarSeccion.observe(skills_Desktop);
+observar_seleccionarSeccion.observe(contactame_Desktop);
