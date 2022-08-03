@@ -1569,7 +1569,7 @@ body {
     /*#endregion MIS SKILLS*/
     /*#region CONTÁCTAME*/
     .contactame {
-        height: 32.5rem;
+        height: auto;
         padding: 0 1rem;
         display: flex;
         flex-flow: row wrap;
@@ -1641,7 +1641,7 @@ body {
 
 /*#endregion MEDIA QUERIES*/
 
-/* .reloadforce {
+.reloadforce {
     background-color: black;
     border: 1px solid black;
     border-radius: 5px;
@@ -1652,4 +1652,4 @@ body {
     position: fixed;
     top: 17%;
     z-index: 999999999;
-} */
+}

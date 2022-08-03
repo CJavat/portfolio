@@ -83,6 +83,7 @@ function moverImagen(entradas, observador) {
         
     });
 } 
+//#region OBSERVE
 observador.observe(moverHortomallas);
 observador.observe(moverGdlCircuits);
 observador.observe(moverUteg);
@@ -96,11 +97,14 @@ observador.observe(moverHortomallasFecha);
 observador.observe(moverGdlCircuitsFecha);
 observador.observe(moverUtegFecha);
 observador.observe(moverCetisFecha);
+//#endregion
+
 //#endregion API INTERSECTION OBSERVE.
 
 
-let quienSoy_Desktop = document.querySelector('.saludo');
-let quienSoy_Mobile = document.querySelector('.saludo');
+//#region declarar variables
+let quienSoy_Desktop = document.querySelector('.contenedor-saludoPrincipal');
+let quienSoy_Mobile = document.querySelector('.contenedor-saludoPrincipal');
 
 let experiencia_Desktop = document.querySelector('.experiencia');
 let experiencia_Mobile = document.querySelector('.experiencia');
@@ -113,26 +117,37 @@ let skills_Mobile = document.querySelector('.skills');
 
 let contactame_Desktop = document.querySelector('.contactame');
 let contactame_Mobile = document.querySelector('.contactame');
+//#endregion
 
-const observar_seleccionarSeccion = new IntersectionObserver(seleccionarSeccion, ()=>{
+let ratio = 1;
+
+const observar_seleccionarSeccion = new IntersectionObserver(seleccionarSeccion, () =>{
     root: null;
-    rootMargin: "0";
-    threshold: .25;
+    rootMargin: "0px";
+    threshold: 0.5;
 });
 
-function seleccionarSeccion(entradas, observador) {
+function seleccionarSeccion(entradas, observar_seleccionarSeccion) {
+    
     entradas.forEach(function(entrada){
-        if(entradas.isIntersecting ==true) {
+        
+        if(entrada.intersectionRatio < ratio) {
+
+            console.log(entrada.intersectionRatio);
+        }
+        
+        /* if(entrada.isIntersecting) {
             //entrada.target.classList.add('seccionSeleccionada');
             console.log("ENTRO: "+ entrada.target.id);
         }
         else {
             //entrada.target.classList.remove('seccionSeleccionada');
             console.log("SALIO:" + entrada.target.id);
-        }
+        } */
+        
     });
 }
-
+    
 observar_seleccionarSeccion.observe(quienSoy_Desktop);
 observar_seleccionarSeccion.observe(experiencia_Desktop);
 observar_seleccionarSeccion.observe(aptitudes_Desktop);
